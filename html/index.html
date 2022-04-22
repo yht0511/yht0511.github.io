@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="杨浩天">
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Html - 杨浩天-笔记</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/bootstrap-theme.min.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="..">杨浩天-笔记</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="..">关于</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="../Front-End/">前端</a>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li>
+                    <a href="https://github.com/yht0511/yht0511">
+                        
+                            <i class="fa fa-github"></i>
+                        
+                        GitHub
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="row">
+                    <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+      
+    
+        <li class="main active"><a href="#html">Html</a></li>
+        
+    
+        <li class="main "><a href="#_1">骨架结构</a></li>
+        
+    
+        <li class="main "><a href="#_2">常用标签</a></li>
+        
+            <li><a href="#1html">1.Html 标题</a></li>
+        
+            <li><a href="#2">2.段落标签和换行标签</a></li>
+        
+            <li><a href="#3">3.文本格式化标签</a></li>
+        
+            <li><a href="#3divspan">3.div标签和span标签</a></li>
+        
+            <li><a href="#3_1">3.图像标签</a></li>
+        
+            <li><a href="#4">4.超链接标签</a></li>
+        
+            <li><a href="#5">5.注释标签</a></li>
+        
+            <li><a href="#6">6.特殊字符</a></li>
+        
+    
+        <li class="main "><a href="#_10">表格，列表与表单</a></li>
+        
+            <li><a href="#1">1.表格</a></li>
+        
+            <li><a href="#2_1">2.列表</a></li>
+        
+    
+    
+    </ul>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p><link rel="stylesheet" href="../style-all.css"></p>
+<p id="html-top"></p>
+<hr />
+<h1 id="html">Html</h1>
+<hr />
+<h1 id="_1">骨架结构</h1>
+<p>Html标签往往成对出现,分别称作开放标签和闭合标签.
+每个网页都有一些基础结构标签:</p>
+<pre><code>&lt;!DOCTYPE html&gt;  
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;  
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt; 
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>让我们学习他们的含义:</p>
+<ul>
+<li><code>&lt;!DOCTYPE html&gt;</code> 通用声明,告诉浏览器这是Html5.[DOC:文档,TYPE:类型]</li>
+<li><code>&lt;html lang="en"&gt;</code> [lang:language,语言],它说明本网页的语言格式   </li>
+<li><code>&lt;head&gt;</code> 头部标签<br />
+<code>&lt;title&gt;</code> 文档的标题.</li>
+<li><code>&lt;body&gt;</code> 主体标签,我们的大多数元素都放在里面.</li>
+</ul>
+<hr />
+<h1 id="_2">常用标签</h1>
+<p>使用语义标签,让页面结构更清晰.  </p>
+<h2 id="1html">1.Html 标题</h2>
+<hr />
+<p><code>&lt;h1&gt;&lt;/h1&gt;</code> 这是一对标题标签.[h:Heading,带头]  </p>
+<p>你可以输入h1-h6,他们分别对应不用大小,就像这样:</p>
+<h1>吼吼</h1>
+<h2>哈哈</h2>
+<h3>呵呵</h3>
+<h4>嘿嘿</h4>
+<h5>嘻嘻</h5>
+<h6>哼哼</h6>
+
+<hr />
+<h2 id="2">2.段落标签和换行标签</h2>
+<h3 id="_3">段落标签</h3>
+<p>还记得初中学的单词paragraph吗?他的意思就是段落.<br />
+<code>&lt;p&gt;我是一个段落&lt;/p&gt;</code></p>
+<p>在html中,再多的空格也会被解释为一个,倘若需要快速简便的分段,就需要使用<code>&lt;p&gt;</code>标签.(另外,使用它还可以实现自动换行和段落空隙~)</p>
+<h3 id="_4">换行标签</h3>
+<p>对文字进行强制换行.
+<code>&lt;br /&gt;</code></p>
+<p>这是一个单标签,它并不成对,你可以不加<code>/</code>,但是这样可以让代码更加规范.  </p>
+<h2 id="3">3.文本格式化标签</h2>
+<hr />
+<h3 id="_5">加粗标签</h3>
+<p><code>&lt;strong&gt;&lt;/strong&gt;</code> (多强壮啊)<br />
+<code>&lt;b&gt;&lt;/b&gt;</code> </p>
+<p>在md文件里尝试一下吧:  </p>
+<p><strong>我很strong!</strong><br />
+<b>我虽然叫b,但也很strong!</b></p>
+<h3 id="_6">倾斜标签</h3>
+<p><code>&lt;em&gt;&lt;/em&gt;</code> (emmm,我想躺下睡大觉)<br />
+<code>&lt;i&gt;&lt;/i&gt;</code> (i不正如一个伸着手向左走去的瞌睡虫吗?)</p>
+<p>尝试一下:  </p>
+<p><em>我不熬夜!</em><br />
+<i>我要睡觉!</i></p>
+<h3 id="_7">删除线</h3>
+<p><code>&lt;del&gt;&lt;/del&gt;</code> [del:delele,删除]<br />
+<code>&lt;s&gt;&lt;/s&gt;</code> (<s>这句话死掉了</s>)</p>
+<p>尝试一下:</p>
+<p><del>不要划掉我!</del><br />
+<s>我就划掉,嘻嘻</s></p>
+<h3 id="_8">下划线</h3>
+<p><code>&lt;ins&gt;&lt;/ins&gt;</code> <br />
+<code>&lt;u&gt;&lt;/u&gt;</code></p>
+<p><u>就是这个效果</u></p>
+<h2 id="3divspan">3.div标签和span标签</h2>
+<hr />
+<p>没有语义,只是用来装内容.  </p>
+<p>Q:为啥要用盒子?<br />
+A:可以把内容归类,便于修改样式等.布局神器!  </p>
+<h3 id="div">div标签</h3>
+<p>一个只能占一行!你可以修改它的宽度,但不会改变它霸占一行的现况.<br />
+超大盒子~  </p>
+<p><code>&lt;div&gt;&lt;/div&gt;</code></p>
+<h3 id="span">span标签</h3>
+<p><code>&lt;span&gt;&lt;/span&gt;</code>  </p>
+<hr />
+<h2 id="3_1">3.图像标签</h2>
+<p><code>&lt;img src="图片地址" alt="消失后的语句" /&gt;</code>  </p>
+<p>每个img标签必须有路径:</p>
+<ul>
+<li>
+<p>相对路径:<br />
+同一级文件:<code>picture.png</code> (直接输入文件名即可)<br />
+下一级文件:<code>pic/picture.png</code> (进入pic后才可读取)<br />
+上一级文件:<code>../pic/picture.png</code> (先到上一级文件夹,再进入pic后才可读取)</p>
+</li>
+<li>
+<p>绝对路径:(指绝对位置,而不会因html文件位置而改变.)<br />
+网上的图片:<code>http://baidu.com/......</code><br />
+本地路径:<code>F:\杨浩天\Experiments\WEB\Note\pic</code><br />
+我们习惯用<code>\</code>表示盘符开始的绝对路径.</p>
+</li>
+</ul>
+<h3 id="_9">图像标签的属性</h3>
+<ul>
+<li>src 图片路径</li>
+<li>alt 消失后的替换文本</li>
+<li>title 提示文本,将鼠标放于其上显示的文字</li>
+<li>width 宽度</li>
+<li>height 高度</li>
+<li>border 边框粗细
+他们统一写在img标签内部,使用空格分开,用等号赋值.  </li>
+</ul>
+<p>注意!单独修改宽或高,浏览器会自动调整图片大小,而不会失真.  </p>
+<h2 id="4">4.超链接标签</h2>
+<hr />
+<p><code>&lt;a href="跳转的地方" target="_blank或_self"&gt;链接名字&lt;/a&gt;</code>  </p>
+<h3 id="href">超链接标签的href</h3>
+<ul>
+<li>
+<p>外部链接  </p>
+<p><code>&lt;a href="http://www.baidu.com" target="_blank"&gt;链接名字&lt;/a&gt;</code>
+(必须以http://开头来表明是外部链接)</p>
+</li>
+<li>
+<p>内部链接</p>
+<p><code>&lt;a href="index.html" target="_self"&gt;链接名字&lt;/a&gt;</code>  打开当前目录下index.html</p>
+</li>
+<li>
+<p>空链接</p>
+<p><code>&lt;a href='#'&gt;链接名字&lt;/a&gt;</code></p>
+</li>
+<li>
+<p>锚点链接</p>
+<p><code>&lt;a href='#元素id'&gt;链接名字&lt;/a&gt;</code></p>
+</li>
+</ul>
+<p>尝试一下:  </p>
+<p><a href="http://www.baidu.com" target="_blank">到百度</a></p>
+<p><a href="#html-top" target="_self">到顶部</a></p>
+<h3 id="target">超链接标签的target</h3>
+<p>[target:目标,新页面放置的目标]</p>
+<ul>
+<li>_blank  打开新窗口</li>
+<li>_self  使用当前窗口</li>
+</ul>
+<h2 id="5">5.注释标签</h2>
+<hr />
+<p><code>&lt;!-- 我是一个注释 --&gt;</code></p>
+<p>他并不会在页面中显示出来,给程序员看.</p>
+<h2 id="6">6.特殊字符</h2>
+<p><code>&amp;nbsp;</code> 空格 (nb的space~)</p>
+<p><img src="pic/1.2/2.png" width="80%"></p>
+<p>(截取自B站pink老师视频)</p>
+<p>正经人除了空格其他的谁背啊~都是用的时候查表.</p>
+<hr />
+<h1 id="_10">表格，列表与表单</h1>
+<h2 id="1">1.表格</h2>
+<h3 id="_11">基本标签语法</h3>
+<ul>
+<li><code>&lt;table&gt;&lt;/table&gt;</code> 表格定义标签    [table:桌子，表格和桌子都方方正正的]</li>
+<li><code>&lt;tr&gt;&lt;/tr&gt;</code>       表格的行        [tr:tree,像树一样,行就是树上多个分叉]</li>
+<li><code>&lt;td&gt;&lt;/td</code>&gt;       表格中的单元格   [td:退订,分叉上结了好多果子，快把牛顿砸瘪了,赶紧点退订]</li>
+<li><code>&lt;th&gt;&lt;/th&gt;</code>       表头单元格       [th:这里的苹果有放射性！化学元素钍，盖格计数器的表头遇见它就滴滴响]  </li>
+</ul>
+<p>哈哈,开个玩笑。不过联想记忆挺管用的（笑）。  </p>
+<p>注意：</p>
+<ul>
+<li>别想不劳而获，一级一级往下嵌套，都得出现才可以使用~</li>
+<li>表头默认加粗，居中。  </li>
+<li>表格里可以放任何元素。</li>
+</ul>
+<p>尝试一下:  </p>
+<table class='table_demonstrate_1'>
+    <tr><th>人</th><th>性别</th><th>特点</th></tr>
+    <tr><td>笔者</td><td>男</td><td>帅气迷人</td></tr>
+    <tr><td>出卷老师</td><td>人妖</td><td>不是人~</td></tr>
+</table>
+
+<h3 id="_12">基本标签属性</h3>
+<ul>
+<li>align       {left,center,right}       对齐方式。           [align:对齐]  </li>
+<li>border     {1/“”}                    有无边框。          （表格外部）</li>
+<li>cellpadding {像素值}                  单元格与内容的空隙。 （单元格内部）</li>
+<li>cellspacing {像素值}                  单元格之间空白        （单元格外部）</li>
+<li>width       {像素值}                  表格宽度  </li>
+<li>height      {像素值}                  表格高度<br />
+注意：写在标签内部！  </li>
+</ul>
+<p>示例：居中有边框，cellpadding=10px，cellspacing=1px</p>
+<table class='table_demonstrate_2' align=center border=1 cellpadding=10px cellspacing=1px>
+    <tr><th>人</th><th>性别</th><th>特点</th></tr>
+    <tr><td>笔者</td><td>男</td><td>帅气迷人</td></tr>
+    <tr><td>出卷老师</td><td>人妖</td><td>不是人~</td></tr>
+</table>
+
+<h3 id="_13">表格结构标签</h3>
+<p>表格可以分为头部区域与主体区域：  </p>
+<ul>
+<li><code>&lt;thead&gt;</code>   头部区域  </li>
+<li><code>&lt;tbody&gt;</code>   主体区域  </li>
+</ul>
+<p>挺像html的结构，对吧？前面加个t（table）就好了。  </p>
+<h3 id="_14">合并单元格</h3>
+<ul>
+<li>rowspan  {=“合并几个”}    跨行合并   [row:行]</li>
+<li>colspan  {=“合并几个”}    跨列合并   [col:列]   </li>
+</ul>
+<p>要点：  </p>
+<ul>
+<li>合并时，以靠左上角的单元格为基点，然后定义合并几个.  </li>
+<li>必须写在单元格元素中（td/th）   </li>
+<li>合并了之后记得删掉除了基点以外其他被合并的单元格。  </li>
+<li>千万别搞混哦~ colspan将横向的单元格合并，rowspan时纵向。因为span就是跨越，跨越了它，不正说明与它垂直么？</li>
+</ul>
+<p>示例：</p>
+<table class='table_demonstrate_1' border=1 cellpadding=10px cellspacing=1px>
+    <tr><th>人</th><th colspan=2>特点</th></tr>
+    <tr><td>笔者</td><td>男</td><td>帅气迷人</td></tr>
+    <tr><td>出卷老师</td><td>人妖</td><td>不是人~</td></tr>
+</table>
+
+<h2 id="2_1">2.列表</h2>
+<hr />
+<h3 id="_15">分类</h3>
+<ul>
+<li>无序列表</li>
+<li>有序列表  </li>
+</ul>
+<h3 id="_16">无序列表</h3>
+<ul>
+<li><code>&lt;ul&gt;</code>    无序列表标签  [unorder list:无序的列表]</li>
+<li><code>&lt;li&gt;</code>    列表项目标签  [list item：列表项目]</li>
+</ul>
+<p>注意： </p>
+<ul>
+<li>ul里面只能可以放li！不能乱放<code>&lt;p&gt;</code>！  </li>
+<li>但是li里面啥都能放！！！<br />
+[父亲不能乱放p，但是娃可以啊（doge）]</li>
+</ul>
+<p>尝试一下吧： </p>
+<h4>尝试一下无须列表</h4>
+<ul>
+    <li>爸爸你无序打错字了</li>
+    <li>胡...说，你凭空污人清白~ </li>  
+    <li>嗨，杨浩天最懒了，改是不可能改的</li>
+</ul>
+
+<p>哈哈，你应该没啥感觉，因为Markdown里面也有列表功能，转换成html后代码是一致的。<br />
+这足以说明列表的重要性。  </p>
+<h3 id="_17">有序列表</h3>
+<ul>
+<li><code>&lt;ol&gt;</code>    有序列表标签  [order list]</li>
+<li><code>&lt;li&gt;</code>    列表项目标签  [list item]</li>
+</ul>
+<p>尝试一下：</p>
+<h4>世界十大奇迹</h4>
+
+<ol>
+    <li>牛肉面的配料表里有牛肉</li>
+    <li>寒假最后一天补完所有作业</li>
+    <li>编不出来了</li>  
+    <li>想什么呢，说的好像我能一下子想出那么多一样</li>
+</ol>
+
+<h3 id="_18">自定义列表</h3>
+<ul>
+<li>dl  自定义列表标签   [defined list:（被用户）定义过的列表]</li>
+<li>dt  主文字           [defined title]</li>
+<li>dd  解释说明的文字   [defined definition:自定义的对主文字的定义]</li>
+</ul>
+<h3 id="_19">表单</h3>
+<p>组成：  </p>
+<ul>
+<li>表单域    表单元素所在的整个一大块。  </li>
+<li>表单元素  </li>
+<li>提示信息  提示用户填入的信息类型。  </li>
+</ul>
+<h4 id="_20">表单域</h4>
+<p>表单域标签：  </p>
+<p><code>&lt;form&gt;&lt;/form&gt;</code>      定义表单域,其中信息会被提交到服务器。</p>
+<p>表单域的属性：  </p>
+<ul>
+<li>action     {url地址}      定义表单信息将送往哪个地址给服务器处理。  </li>
+<li>method     {get/post}     提交方式。  </li>
+<li>name       {名称}          指定表单名称，以便区分。  </li>
+</ul>
+<h4 id="_21">表单元素</h4>
+<h5 id="input">input输入框</h5>
+<p>input是单标签。 <br />
+input可填入的属性：</p>
+<ul>
+<li>type          {<a href="#type_shuxing">type属性值</a>}  {<a href="#type_shili">type属性值示例</a>}</li>
+<li>name          {input元素的值-&gt;默认的字}  </li>
+<li>checked       {checked（选中）}    </li>
+<li>maxlength     {输入字符最大长度}  </li>
+</ul>
+<p>注意： </p>
+<ul>
+<li>name和value每个都有  </li>
+<li>name是表单元素的名字，单选按钮之间和复选按钮之间都得一样才可以。    </li>
+<li>checked 主要用于单选，复选框  </li>
+</ul>
+<p>反面例子（单选按钮没加name）<br />
+男<input type="radio"/>女<input type="radio"/>
+（你可以两个都选~）  </p>
+<p><img src="pic/1.3/1.png" widget=50% id='type_shuxing'/>  </p>
+<p>type的属性值(截取自B站Pink老师视频)  </p>
+<p id='type_shili'>type的示例：</p>
+<form>
+    普通：  <input type="text" value=""/>    
+    密码：  <input type="password"/>
+    <br/><br/>
+    单选:   <input type="radio" name=“1”/><input type="radio" name=“1”/>
+    复选框:  1<input type="checkbox"/> 2<input type="checkbox"/> 3<input type="checkbox"/>  
+    提交：   <input type="submit" value="提交"/>
+</form>
+
+<h5 id="lable">lable标签</h5>
+<p>使用原因：更易选择，扩大选择区域。 </p>
+<p>你可以理解为专为提示文本设计的标签。 </p>
+<p>属性：</p>
+<ul>
+<li>for&nbsp;&nbsp;&nbsp;{填对应元素的id}  </li>
+</ul>
+<p><label for='i1'>点击我!</label>
+<input type="radio" name="I2" id="i1"/>
+<input type="radio" name="I2" id="i2"/>
+<label for='i2'>别听他的,点我!</label></p>
+<h5 id="select">select下拉表单</h5>
+<ul>
+<li><code>&lt;select&gt;&lt;/select&gt;</code>&nbsp;&nbsp;&nbsp;下拉表单的主标签  </li>
+<li><code>&lt;option&gt;&lt;/option&gt;</code>&nbsp;&nbsp;&nbsp;下拉表单的选项  </li>
+</ul>
+<p>option属性:  </p>
+<ul>
+<li>selected  {"selected"}&nbsp;&nbsp;&nbsp;默认选中的选项</li>
+</ul>
+<p>示例:  </p>
+<p>你的性别
+<select></p>
+<option>男</option>
+<option>女</option>
+<option selected="selected">人妖</option>
+<p></select></p>
+<h5 id="textarea">textarea 文本域元素</h5>
+<p>用于书写大量文字  </p>
+<ul>
+<li><code>&lt;textarea&gt;默认文字&lt;/textarea&gt;</code>&nbsp;&nbsp;&nbsp;文本域主标签  </li>
+</ul>
+<p>属性:  </p>
+<ul>
+<li>cols&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{数字}  列数 </li>
+<li>rows&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{数字}  行数  </li>
+</ul>
+<p>示例:  </p>
+<form>
+<textarea style="height: 120px;">
+我是默认文字
+</textarea>
+</form>
+<p><br/></p></div>
+                </div>
+        </div>
+
+    <hr>
+    <footer class="container">
+        
+        <center>Documentation built with <a href="http://www.mkdocs.org">MkDocs</a> and <a href="http://kristopolous.github.io/BOOTSTRA.386">BOOTSTRA.386</a>.</center>
+    </footer>
+        <script src="../search/main.js"></script>
+    </body>
+</html>

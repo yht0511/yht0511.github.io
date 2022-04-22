@@ -1,0 +1,99 @@
+ul > .main {
+    color: rgb(26, 80, 189);
+    background-color: rgb(127, 159, 247);
+    /* rgb(15, 174, 84) */
+    font-weight: 1000;
+    border: 1px solid rgb(8, 44, 247);
+    line-height: 24px;
+}
+
+.nav.bs-sidenav .active{
+    background-color: rgb(54, 194, 233);
+}
+
+.nav.bs-sidenav li{
+    margin-top: -1px;
+    padding: 1px 0;
+}
+
+h1{
+    color: rgb(10, 207, 102);
+    font-size: 35px;
+}
+
+h2 {
+    color: rgb(9, 163, 81);
+    font-size: 25px;
+}
+h3 {
+    color: rgb(9, 163, 81);
+    
+}
+h4 {
+    color: rgb(9, 163, 81);
+}
+h5 {
+    color: rgb(9, 163, 81);
+}
+h6 {
+    color: rgb(9, 163, 81);
+}
+hr{
+    border: none;
+    border-top: 1px solid rgb(199, 223, 137);
+}
+
+p,
+body {
+    cursor: default;
+}
+
+code {
+    cursor: text;
+}
+
+code{
+    display: inline-block;
+    margin-bottom: 2px;
+}
+
+.bs-sidebar.hidden-print.affix.well {
+    max-height: 91%;
+    overflow-y: auto;
+}
+
+.nav.bs-sidenav {
+    max-height: -webkit-fill-available;
+    max-width: 190px;
+}
+
+*{
+    font-family: DOS,宋体,Microsoft Yahei;
+    /* -webkit-font-smoothing: antialiased; */
+}
+
+.col-md-9 {
+    background-color: rgb(0, 0, 132);
+
+    
+}
+
+.navbar-toggle{
+    background-color: rgb(163, 160, 163) !important;
+    position:relative;
+    right: 10px;
+    height: 20px;
+}
+
+footer center{
+    visibility: hidden;
+}
+
+footer::before{
+    content: "Written By Yang Haotian" !important;
+    display: inline-block;
+    margin: auto;
+    height: 10px;  
+    /* background-color: aqua; */
+
+}

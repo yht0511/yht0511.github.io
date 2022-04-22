@@ -1,0 +1,1993 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="杨浩天">
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Css - 杨浩天-笔记</title>
+        <link href="bootstrap.min.css" rel="stylesheet">
+        <link href="font-awesome.min.css" rel="stylesheet">
+        <link href="bootstrap-theme.min.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="..">杨浩天-笔记</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="..">关于</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="../Front-End/">前端</a>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li>
+                    <a href="https://github.com/yht0511/yht0511">
+                        
+                            <i class="fa fa-github"></i>
+                        
+                        GitHub
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="row">
+                    <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+      
+    
+        <li class="main active"><a href="#css">CSS</a></li>
+        
+    
+        <li class="main "><a href="#css_1">CSS简介</a></li>
+        
+            <li><a href="#1css">1.CSS语法组成</a></li>
+        
+            <li><a href="#2css">2.CSS代码风格</a></li>
+        
+    
+        <li class="main "><a href="#css_2">CSS基础选择器</a></li>
+        
+            <li><a href="#1">1.标签选择器</a></li>
+        
+            <li><a href="#2">2.类选择器</a></li>
+        
+            <li><a href="#3-">3.类选择器-多类名</a></li>
+        
+            <li><a href="#4id">4.id选择器</a></li>
+        
+            <li><a href="#5">5.通配符选择器</a></li>
+        
+            <li><a href="#6">6.基础选择器总结</a></li>
+        
+    
+        <li class="main "><a href="#css_3">CSS字体属性</a></li>
+        
+            <li><a href="#1_1">1.字体名称</a></li>
+        
+            <li><a href="#2_1">2.字体大小</a></li>
+        
+            <li><a href="#3">3.字体粗细</a></li>
+        
+            <li><a href="#4">4.字体样式</a></li>
+        
+            <li><a href="#5_1">5.字体复合属性</a></li>
+        
+    
+        <li class="main "><a href="#css_4">CSS文本属性</a></li>
+        
+            <li><a href="#1_2">1.文本颜色</a></li>
+        
+            <li><a href="#2_2">2.对齐文本</a></li>
+        
+            <li><a href="#3_1">3.装饰文本</a></li>
+        
+            <li><a href="#4_1">4.文本缩进</a></li>
+        
+            <li><a href="#5_2">5.行间距</a></li>
+        
+            <li><a href="#6_1">6.总结</a></li>
+        
+    
+        <li class="main "><a href="#css_5">CSS的引入方式</a></li>
+        
+            <li><a href="#1_3">1.分类</a></li>
+        
+            <li><a href="#2_3">2.内部样式表</a></li>
+        
+            <li><a href="#3_2">3.行内样式表</a></li>
+        
+            <li><a href="#4_2">4.外部样式表</a></li>
+        
+    
+        <li class="main "><a href="#emmet">Emmet语法</a></li>
+        
+            <li><a href="#1html">1.快速生成Html</a></li>
+        
+            <li><a href="#2css_1">2.快速生成CSS样式</a></li>
+        
+    
+        <li class="main "><a href="#_15">复合选择器</a></li>
+        
+            <li><a href="#1_4">1.与基础选择器的关系</a></li>
+        
+            <li><a href="#2_4">2.后代选择器</a></li>
+        
+            <li><a href="#3_3">3.子选择器</a></li>
+        
+            <li><a href="#4_3">4.并集选择器</a></li>
+        
+            <li><a href="#5_3">5.伪类选择器</a></li>
+        
+            <li><a href="#6_2">6.总结</a></li>
+        
+    
+        <li class="main "><a href="#_26">元素的显示模式</a></li>
+        
+            <li><a href="#1_5">1.简介</a></li>
+        
+            <li><a href="#2_5">2.块元素</a></li>
+        
+            <li><a href="#3_4">3.行内元素/内联元素</a></li>
+        
+            <li><a href="#4_4">4.行内块元素</a></li>
+        
+            <li><a href="#5_4">5.元素显示模式的转换</a></li>
+        
+    
+        <li class="main "><a href="#css_6">CSS背景</a></li>
+        
+            <li><a href="#1_6">1.背景颜色</a></li>
+        
+            <li><a href="#2_6">2.背景图片</a></li>
+        
+            <li><a href="#3_5">3.背景平铺</a></li>
+        
+            <li><a href="#4_5">4.背景位置</a></li>
+        
+            <li><a href="#5_5">5.背景图像固定</a></li>
+        
+            <li><a href="#6_3">6.背景简写</a></li>
+        
+            <li><a href="#7">7.背景颜色半透明</a></li>
+        
+            <li><a href="#8">8.总结</a></li>
+        
+    
+        <li class="main "><a href="#css_7">CSS三大特性</a></li>
+        
+            <li><a href="#1_7">1.层叠性</a></li>
+        
+            <li><a href="#2_7">2.继承性</a></li>
+        
+            <li><a href="#3_6">3.优先级</a></li>
+        
+    
+        <li class="main "><a href="#css_8">CSS盒子模型</a></li>
+        
+            <li><a href="#1_8">1.组成</a></li>
+        
+            <li><a href="#2_8">2.边框</a></li>
+        
+            <li><a href="#3-padding">3.内边距-padding</a></li>
+        
+            <li><a href="#4-margin">4.外边距-margin</a></li>
+        
+            <li><a href="#5_6">5.清除内外边距</a></li>
+        
+            <li><a href="#6_4">6.圆角边框</a></li>
+        
+            <li><a href="#7_1">7.盒子阴影</a></li>
+        
+            <li><a href="#8_1">8.文字阴影</a></li>
+        
+    
+        <li class="main "><a href="#css_9">CSS浮动</a></li>
+        
+            <li><a href="#1_10">1.传统网页布局的三种方式</a></li>
+        
+            <li><a href="#2_10">2.浮动的作用</a></li>
+        
+            <li><a href="#3_7">3.浮动的含义</a></li>
+        
+            <li><a href="#4_6">4.语法</a></li>
+        
+            <li><a href="#5_7">5.浮动特性</a></li>
+        
+            <li><a href="#6_5">6.浮动布局的注意点</a></li>
+        
+            <li><a href="#7_2">7.为什么消除浮动</a></li>
+        
+            <li><a href="#8_2">8.清除浮动语法</a></li>
+        
+            <li><a href="#9">9.清除浮动方法</a></li>
+        
+    
+        <li class="main "><a href="#css_10">CSS属性书写顺序</a></li>
+        
+    
+        <li class="main "><a href="#_72">页面布局思路</a></li>
+        
+            <li><a href="#_73">附: 导航栏制作要点</a></li>
+        
+    
+        <li class="main "><a href="#css_11">CSS定位</a></li>
+        
+            <li><a href="#1_11">1.定位组成</a></li>
+        
+            <li><a href="#2-">2.定位模式-静态定位</a></li>
+        
+            <li><a href="#3-_1">3.定位模式-相对定位</a></li>
+        
+            <li><a href="#4-">4.定位模式-绝对定位</a></li>
+        
+            <li><a href="#5_8">5.子绝父相</a></li>
+        
+            <li><a href="#6-">6.定位模式-固定定位</a></li>
+        
+            <li><a href="#7-">7.定位模式-粘性定位</a></li>
+        
+            <li><a href="#8_3">8.定位叠放顺序</a></li>
+        
+            <li><a href="#9_1">9.定位拓展</a></li>
+        
+    
+        <li class="main "><a href="#_86">显示隐藏元素</a></li>
+        
+            <li><a href="#1display">1.display</a></li>
+        
+            <li><a href="#2visibility">2.visibility</a></li>
+        
+            <li><a href="#3overflow">3.overflow溢出</a></li>
+        
+            <li><a href="#4_7">4.练习</a></li>
+        
+    
+        <li class="main "><a href="#css_12">CSS高级技巧</a></li>
+        
+            <li><a href="#1_12">1.精灵图技术</a></li>
+        
+            <li><a href="#2_11">2.字体图标</a></li>
+        
+            <li><a href="#3css">3.CSS三角</a></li>
+        
+            <li><a href="#4css">4.CSS用户页面样式</a></li>
+        
+            <li><a href="#5_9">5.行内块和文字垂直居中</a></li>
+        
+            <li><a href="#6_6">6.图片底侧空白缝隙</a></li>
+        
+            <li><a href="#7_3">7.单行文字溢出省略号显示</a></li>
+        
+            <li><a href="#8_4">8.多行文字溢出省略号显示(兼容性差)</a></li>
+        
+            <li><a href="#9-margin">9.布局技巧-margin负值</a></li>
+        
+            <li><a href="#10-">10.布局技巧-文字围绕浮动元素</a></li>
+        
+            <li><a href="#11css">11.CSS初始化</a></li>
+        
+    
+        <li class="main "><a href="#html5">HTML5新增</a></li>
+        
+            <li><a href="#1_13">1.语义化标签</a></li>
+        
+            <li><a href="#2_12">2.视频标签</a></li>
+        
+            <li><a href="#3_8">3.音频标签</a></li>
+        
+            <li><a href="#4input">4.input表单</a></li>
+        
+            <li><a href="#5_10">5.表单属性</a></li>
+        
+    
+        <li class="main "><a href="#css3">CSS3新增</a></li>
+        
+            <li><a href="#1_14">1.属性选择器</a></li>
+        
+            <li><a href="#2_13">2.结构伪类选择器</a></li>
+        
+            <li><a href="#3_9">3.伪元素选择器</a></li>
+        
+            <li><a href="#4-border-box">4.盒子模型 border-box</a></li>
+        
+            <li><a href="#5_11">5.图片模糊处理</a></li>
+        
+            <li><a href="#6calc">6.calc函数</a></li>
+        
+            <li><a href="#7css3">7.CSS3过渡</a></li>
+        
+            <li><a href="#8html5">8.广义的HTML5</a></li>
+        
+    
+    
+    </ul>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p><link rel="stylesheet" href="../style-long.css">
+<link rel="stylesheet" href="../style-all.css"></p>
+<p id='css-top'></p>
+
+<hr/>
+
+<h1 id="css">CSS</h1>
+<hr />
+<h1 id="css_1">CSS简介</h1>
+<hr />
+<h2 id="1css">1.CSS语法组成</h2>
+<pre><code>&lt;style&gt;
+
+选择器
+
+{  
+声明1;  
+声明2;  
+声明3;
+}
+
+&lt;/style&gt;
+</code></pre>
+<p>注意:</p>
+<ul>
+<li>属性与属性值以键值对的方式出现(如:  color:red;).  </li>
+<li>声明之间使用分号隔开.</li>
+</ul>
+<hr />
+<h2 id="2css">2.CSS代码风格</h2>
+<h3 id="_1">样式书写格式</h3>
+<ul>
+<li>紧凑格式&nbsp;&nbsp;&nbsp;<code>h1{color:green;font-size=20px;}</code>  </li>
+<li>展开格式     </li>
+</ul>
+<h3 id="_2">大小写</h3>
+<p>推荐小写字母  </p>
+<h3 id="_3">空格规范</h3>
+<p>习惯在冒号后面加一个空格(我认为是为了方便编辑)<br />
+如:   color: red;  </p>
+<hr />
+<h1 id="css_2">CSS基础选择器</h1>
+<hr />
+<h2 id="1">1.标签选择器</h2>
+<p>定义:以Html标签名作为选择器  </p>
+<p>语法:<br />
+<code>标签名</code> </p>
+<hr />
+<h2 id="2">2.类选择器</h2>
+<p>作用:单独选择某一class(类)的一个/多个标签  </p>
+<p>语法: </p>
+<p><code>.类名</code>  </p>
+<p>选择方法:  </p>
+<ol>
+  <li>在要选择的标签里加入class属性: style="class: xxx;"
+  <li>用类选择器修改样式  
+</ol>
+
+<p><i>样式点定义,一个或多个</i>  </p>
+<p>注意:  </p>
+<ul>
+<li>命名class时不要用数字/中文.  </li>
+</ul>
+<hr />
+<h2 id="3-">3.类选择器-多类名</h2>
+<p>定义:在html标签的class属性里可以定义多个类名.  </p>
+<p>语法: </p>
+<p><code>&lt;div class="xxx1 xxx2"&gt;&lt;/div&gt;</code> </p>
+<p>注意:  </p>
+<ul>
+<li>一定要用空格分开不同类名~ </li>
+<li>标签分别具有这些类名对应的样式.  </li>
+</ul>
+<hr />
+<h2 id="4id">4.id选择器</h2>
+<p>定义:在id名前加上'#'表示对id对应元素的选择.  </p>
+<p>语法: </p>
+<p><code>.id</code>  </p>
+<p>选择方法:  </p>
+<ol>
+  <li>在要选择的标签里加入id属性
+  <li>用id选择器修改样式  
+</ol>
+
+<p>id与div区别:  </p>
+<ul>
+<li>id属性在整个文档里唯一,不可以重复~  </li>
+<li>每个元素只能有一个id属性~  </li>
+</ul>
+<hr />
+<h2 id="5">5.通配符选择器</h2>
+<p>语法:  </p>
+<p><code>*</code>  </p>
+<p>代表所有标签.  </p>
+<hr />
+<h2 id="6">6.基础选择器总结</h2>
+<p><img src="pic/2.2/1.png" width=80%/></p>
+<p>(截取自B站Pink老师视频)  </p>
+<p id="p231"></p>
+<hr />
+<h1 id="css_3">CSS字体属性</h1>
+<hr />
+<h2 id="1_1">1.字体名称</h2>
+<h3 id="_4">语法规范</h3>
+<p><code>font-family: '字体名称1' 字体名称2 字体名称3</code>  </p>
+<p>注意:  </p>
+<ul>
+<li>可以写多个字体,英文逗号隔开.  </li>
+<li>若字体名字有空格,需用引号包含.  </li>
+<li>从前到后优先级越前越高,显示哪一个由用户有无安装该字体为准.  </li>
+</ul>
+<hr />
+<h2 id="2_1">2.字体大小</h2>
+<h3 id="_5">单位</h3>
+<ul>
+<li>px 像素大小(绝对单位)</li>
+<li>em 当前元素1个文字的大小(相对单位)</li>
+</ul>
+<h3 id="_6">语法</h3>
+<p><code>font-size: xxx;</code>&nbsp;&nbsp;&nbsp;&nbsp;{xxx:字体大小}&nbsp;&nbsp;&nbsp;用于修改一般文字</p>
+<p>注意:  </p>
+<ul>
+<li>chrome默认为16px  </li>
+<li>标题是特殊的,要单独指定文字大小.  </li>
+</ul>
+<p>拓展:</p>
+<p>改标题大小需要单独用:  h2{font0-size: xxx;} 修改.</p>
+<hr />
+<h2 id="3">3.字体粗细</h2>
+<h3 id="_7">语法</h3>
+<p><code>font-weight: xxx</code>  </p>
+<p>可以填入的值: </p>
+<ul>
+<li>normal   正常  </li>
+<li>bold     粗体  </li>
+<li>bolder   特粗体  </li>
+<li>lighter  细体  </li>
+<li>number   粗细值(不用写单位)  </li>
+</ul>
+<hr />
+<h2 id="4">4.字体样式</h2>
+<h3 id="_8">语法</h3>
+<p><code>font-style: xxx</code>  </p>
+<p>可以填入的值: </p>
+<ul>
+<li>normal       正常</li>
+<li>italic       斜体</li>
+</ul>
+<style>
+    .italic{
+    font-style: italic;
+    }
+</style>
+
+<p>示例:</p>
+<p class="italic">我喝醉了~</p>
+<p class="italic">开酒不喝车,喝车不开酒!</p>
+<hr />
+<h2 id="5_1">5.字体复合属性</h2>
+<h3 id="_9">语法</h3>
+<p><code>font: font-style font-weight font-size/line-height font-family</code></p>
+<p>注意:  </p>
+<ul>
+<li>一定要按顺序  </li>
+<li>空格隔开  </li>
+<li>可以省略前两个和line-height,但一定要保留size和famliy.<br />
+  我的理解:第一个和第四个都是字符,2和3都是数字.这使得浏览器在解读时,必须至少有两个相邻参数来参照对应含义.而最后两个参数显然是最常用的选择.</li>
+</ul>
+<hr />
+<h1 id="css_4">CSS文本属性</h1>
+<hr />
+<h2 id="1_2">1.文本颜色</h2>
+<h3 id="_10">语法</h3>
+<p><code>color: 颜色;</code>  </p>
+<h3 id="_11">颜色表示方式</h3>
+<ul>
+<li>预定义的颜色值      red,green,blue等等  </li>
+<li>16进制颜色值        #ffffff  --&gt; 可以两两位分为三个,分别是rgb的三个值的16进制数  </li>
+<li>rgb值              rgb(255,255,255)  --&gt; 填入十进制颜色代码(0-2^8)  </li>
+</ul>
+<hr />
+<h2 id="2_2">2.对齐文本</h2>
+<h3 id="_12">语法</h3>
+<p><code>text-align</code>&nbsp;&nbsp;&nbsp;&nbsp;{left(默认)/right/center}&nbsp;&nbsp;&nbsp;&nbsp;水平对齐方式  </p>
+<hr />
+<h2 id="3_1">3.装饰文本</h2>
+<h3 id="_13">语法</h3>
+<p><code>text-decoration: xxx</code>&nbsp;&nbsp;&nbsp;&nbsp;{none/underline/overline/line-through}  </p>
+<h3 id="_14">示例</h3>
+<style>
+    .underline{text-decoration: underline; }
+    .overline{text-decoration: overline;}
+    .line-through{text-decoration: line-through;}
+</style>
+
+<p class="underline">瞧!我下面有根线!</p>
+<p class="overline">瞧!我上面有根线!</p>
+<p class="line-through">瞧!我被删了!</p>
+<hr />
+<h2 id="4_1">4.文本缩进</h2>
+<p>制定段落的缩进.</p>
+<p><code>text-indent: 距离</code>  </p>
+<p>注意:  </p>
+<ul>
+<li>若为负值,向左缩进.</li>
+</ul>
+<hr />
+<h2 id="5_2">5.行间距</h2>
+<p>设置行高,控制文字行与行之间距离</p>
+<p><code>line-height: 距离</code></p>
+<p>注意:</p>
+<ul>
+<li>行高=上间距+文本高度+下间距,上间距=下间距.  </li>
+<li>默认的行高=文本高度.  </li>
+<li>可以利用上间距=下间距的原理实现文本垂直居中,把行高调成与div高度一致即可. </li>
+</ul>
+<hr />
+<h2 id="6_1">6.总结</h2>
+<hr />
+<p><img src="pic/2.3/1.png" width=80%/></p>
+<p>(截取自B站Pink老师视频)  </p>
+<h1 id="css_5">CSS的引入方式</h1>
+<hr />
+<h2 id="1_3">1.分类</h2>
+<ul>
+<li>行内样式表 </li>
+<li>内部样式表  </li>
+<li>外部样式表  </li>
+</ul>
+<hr />
+<h2 id="2_3">2.内部样式表</h2>
+<p>特点:</p>
+<ul>
+<li>使用<code>&lt;style&gt;</code>标签.  </li>
+<li>理论上可以放在任何地方，但是一般放于<code>&lt;head&gt;</code>之中.  </li>
+<li>结构清晰，但并未实现结构与样式的完全分离.(还是放到html页面内部了)  </li>
+</ul>
+<hr />
+<h2 id="3_2">3.行内样式表</h2>
+<p>语法:</p>
+<p><code>style="CSS样式"</code></p>
+<p>特点:  </p>
+<ul>
+<li>直接在标签内部  </li>
+<li>样式需使用双引号括起  </li>
+<li>用于修改简单样式  </li>
+</ul>
+<p>举例:<br />
+<code>&lt;p style="color: red;"&gt;&lt;/p&gt;</code></p>
+<hr />
+<h2 id="4_2">4.外部样式表</h2>
+<p>语法:  </p>
+<ul>
+<li>在css文件中,只写<code>&lt;style&gt;</code>内部的样式表内容,不需要管<code>&lt;head&gt;</code>,<code>&lt;style&gt;</code>等标签.  </li>
+<li>在html文件中,需要用<code>&lt;link&gt;</code>建立连接: <br />
+<code>link rel="stylesheet" href="css外部样式表文件路径"</code><br />
+[rel:relate,关联]--&gt;关联到样式表</li>
+</ul>
+<p>特点:  </p>
+<ul>
+<li>样式单独写在CSS之中,需要引入到页面.  </li>
+<li>结构与样式完全分离.  </li>
+<li>可以用于多个页面.  </li>
+</ul>
+<p>方法: </p>
+<ul>
+<li>新建一个.css文件  .</li>
+<li>通过<code>&lt;link&gt;</code>标签引入外部样式表.  </li>
+</ul>
+<hr />
+<h1 id="emmet">Emmet语法</h1>
+<hr />
+<h2 id="1html">1.快速生成Html</h2>
+<p>语法:  </p>
+<ul>
+<li><code>标签名和Tab</code><br />
+快速生成标签  </li>
+<li><code>标签名*num</code><br />
+快速生成num个标签  </li>
+<li><code>父标签&gt;子标签</code><br />
+生成嵌套关系标签  </li>
+<li><code>并列标签+并列标签</code><br />
+生成多个并列的标签  </li>
+<li><code>.标签名/#标签名 和tab</code><br />
+生成带类或id的标签  </li>
+<li><code>$</code><br />
+自增符号<code>$</code>可以代替一个随个数递增的变量.<br />
+例:<code>.demo$*5</code>会生成从demo1到demo5的标签  </li>
+<li><code>标签{文字}</code><br />
+自动填入标签内的文字  </li>
+</ul>
+<hr />
+<h2 id="2css_1">2.快速生成CSS样式</h2>
+<p>语法:  </p>
+<ul>
+<li><code>属性简写形式和属性值</code><br />
+生成键值对.<br />
+例:<code>w200</code>--&gt;<code>width: 100px</code></li>
+</ul>
+<hr />
+<h1 id="_15">复合选择器</h1>
+<hr />
+<h2 id="1_4">1.与基础选择器的关系</h2>
+<ul>
+<li>复合选择器更准确,更高效.  </li>
+<li>复合选择器是由多个基础选择器以不同方式组合而来的.  </li>
+</ul>
+<hr />
+<h2 id="2_4">2.后代选择器</h2>
+<h3 id="_16">作用</h3>
+<p>有时候，我们只想选择某个父元素下的子元素，而不是全部.</p>
+<h3 id="_17">语法</h3>
+<ul>
+<li><code>父元素的选择器 子元素的选择器</code>  </li>
+</ul>
+<h3 id="_18">特点</h3>
+<ul>
+<li>之间一定要用空格隔开  </li>
+<li>其中的选择器可以是任意基础选择器</li>
+<li>更改的仅仅是对应的父元素里的子元素，父元素不受影响.  </li>
+<li>后代，不光是儿子，还有孙子（zei），他选择了全部后代.  </li>
+<li>可以写多个元素，一层层查找目标.例:<code>div ol li</code>，找到div里ol的li并作为目标.  </li>
+<li>不需要把所有层级写完，比如<code>div ol li</code>，也可以直接跨级:<code>div li</code>.</li>
+</ul>
+<hr />
+<h2 id="3_3">3.子选择器</h2>
+<h3 id="_19">语法</h3>
+<ul>
+<li><code>父元素的选择器&gt;子元素的选择器</code>  </li>
+</ul>
+<h3 id="_20">特点</h3>
+<ul>
+<li>他会选择亲儿砸，而不会选择亲孙子，曾孙子....  </li>
+</ul>
+<hr />
+<h2 id="4_3">4.并集选择器</h2>
+<h3 id="_21">作用</h3>
+<p>一次选择多个元素.</p>
+<h3 id="_22">语法</h3>
+<ul>
+<li><code>选择器1，选择器2</code></li>
+</ul>
+<h3 id="_23">特点</h3>
+<ul>
+<li>逗号分割  </li>
+<li>可以选择任意选择器，包括基础和复合选择器.  </li>
+</ul>
+<hr />
+<h2 id="5_3">5.伪类选择器</h2>
+<h3 id="_24">作用</h3>
+<p>选择不同状态的选择器，为标签添加效果.</p>
+<h3 id="_25">链接伪类选择器</h3>
+<p>语法:</p>
+<ul>
+<li><code>元素的基本选择器(&lt;a&gt;&lt;/a&gt;）:属性</code>  </li>
+</ul>
+<p>属性值:</p>
+<ul>
+<li>link<br />
+没有访问过的链接</li>
+<li>visited<br />
+已经访问过的链接  </li>
+<li>hover <br />
+[hover:悬空]，当前鼠标所在的链接</li>
+<li>active<br />
+还从未点过的链接</li>
+</ul>
+<p>注意:  </p>
+<ul>
+<li>
+<p>链接伪类选择器需要按照LVHA的顺序.[LoVe and HAte:爱与恨]<br />
+原因:浏览器会按照优先级进行排序.link和visited的顺序没有关系，因为他们是二选一;而一个标签既可以是没访问过/访问过了也可以上方有鼠标，更下方的样式会覆盖上方.  </p>
+</li>
+<li>
+<p><code>&lt;a&gt;&lt;/a&gt;</code>标签需要专门去指定<br />
+因为浏览器已经有默认的链接样式.</p>
+</li>
+</ul>
+<h3 id="focus">:focus 伪类选择器</h3>
+<p>语法:</p>
+<ul>
+<li><code>元素的基本选择器（&lt;input&gt;&lt;/input&gt;）:focus</code><br />
+用于表单，当表单元素获取到鼠标的焦点时使用该样式.</li>
+</ul>
+<style>
+    #input_test_focus:focus{
+        background-color:red;
+    }
+</style>
+<p>尝试一下:  </p>
+<form>
+    <input type="text" id="input_test_focus">
+</form>
+
+<hr />
+<h2 id="6_2">6.总结</h2>
+<p><img src="pic/2.7/1.png" width=80%/><br />
+(截取自B站Pink老师视频)  </p>
+<hr />
+<h1 id="_26">元素的显示模式</h1>
+<hr />
+<h2 id="1_5">1.简介</h2>
+<p>含义:元素以什么方式去显示.<br />
+分类:  </p>
+<ul>
+<li>行内元素  </li>
+<li>行内块元素  </li>
+<li>块元素  </li>
+</ul>
+<hr />
+<h2 id="2_5">2.块元素</h2>
+<h3 id="_27">特点</h3>
+<ul>
+<li>独占一行 </li>
+<li>可以控制高度，宽度，内边距，外边距.  </li>
+<li>宽度默认是容器的100%.  </li>
+<li>里面可以放各类元素. <br />
+(但<code>&lt;h1&gt;-&lt;h6&gt;</code>等文字类块级元素标签不能放其他块级元素)</li>
+</ul>
+<hr />
+<h2 id="3_4">3.行内元素/内联元素</h2>
+<h3 id="_28">特点</h3>
+<ul>
+<li>一行多个  </li>
+<li>高宽设置无效，默认宽度就是文字宽度.  </li>
+<li>其中只能容纳文本和其他行内元素.  </li>
+<li>特殊情况:链接里面不能放链接，链接也可以放块级元素，但尽量转化为块级模式再使用.   </li>
+</ul>
+<hr />
+<h2 id="4_4">4.行内块元素</h2>
+<h3 id="_29">特点</h3>
+<ul>
+<li>一行多个.  </li>
+<li>可以设置宽度，高度，内边距，外边距.  </li>
+<li>默认宽度是本身宽度.   </li>
+<li>里面可以放各类元素.  </li>
+</ul>
+<hr />
+<h2 id="5_4">5.元素显示模式的转换</h2>
+<h3 id="_30">作用</h3>
+<p>一种模式的元素需要另外一种模式的特性.  </p>
+<h3 id="_31">语法</h3>
+<ul>
+<li><code>display:block;</code><br />
+转换为块级元素  </li>
+<li><code>display:inline;</code><br />
+转换为行内元素  </li>
+<li><code>display:inline-block</code><br />
+转换为行内块元素 </li>
+</ul>
+<hr />
+<h1 id="css_6">CSS背景</h1>
+<hr />
+<h2 id="1_6">1.背景颜色</h2>
+<h3 id="_32">语法</h3>
+<p><code>background-color: {transparent/color}</code></p>
+<hr />
+<h2 id="2_6">2.背景图片</h2>
+<h3 id="_33">语法</h3>
+<p><code>background-image: {none/url}</code><br />
+注意:一定要有url().  </p>
+<hr />
+<h2 id="3_5">3.背景平铺</h2>
+<h3 id="_34">语法</h3>
+<p><code>background-repeat: {no-repeat/repeat/repeat-x,repeat-y}</code>  </p>
+<hr />
+<h2 id="4_5">4.背景位置</h2>
+<h3 id="_35">语法</h3>
+<p><code>background-position: {x,y}</code></p>
+<p>注意:  </p>
+<ul>
+<li>可以使用方位名词或精确单位,还可以混合.  </li>
+</ul>
+<h3 id="_36">支持的方位名词</h3>
+<ul>
+<li>top  </li>
+<li>center  </li>
+<li>bottom  </li>
+<li>left  </li>
+<li>center  </li>
+<li>right  </li>
+</ul>
+<p>注意:  </p>
+<ul>
+<li>若x，y都是方位名词，则前后没有关系.  </li>
+<li>若只写了一个，则另外一个默认居中.</li>
+</ul>
+<h3 id="_37">精确位置</h3>
+<ul>
+<li>百分比   </li>
+<li>像素值px  </li>
+</ul>
+<p>注意:  </p>
+<ul>
+<li>若x，y都是精确值，则必须是x,y的顺序(只有一个像素值，这个是x，另一个默认居中).  </li>
+</ul>
+<h3 id="_38">混合</h3>
+<p>注意:</p>
+<ul>
+<li>按x,y顺序.  </li>
+</ul>
+<hr />
+<h2 id="5_5">5.背景图像固定</h2>
+<p>图像与视角相对固定--&gt;视差滚动  </p>
+<h3 id="_39">语法</h3>
+<p><code>background-attachment {scroll/fixed}</code> <br />
+[scroll:随对象滚动,fixed:固定]  </p>
+<hr />
+<h2 id="6_3">6.背景简写</h2>
+<h3 id="_40">语法</h3>
+<p><code>background: {颜色,图片地址,平铺模式,滚动与否,位置}</code></p>
+<h3 id="_41">特点</h3>
+<ul>
+<li>没有顺序要求(因为他们的类型都不同,浏览器能够分辨).</li>
+</ul>
+<hr />
+<h2 id="7">7.背景颜色半透明</h2>
+<h3 id="_42">语法</h3>
+<ul>
+<li><code>background: rgba(0,0,0,.0.3);</code><br />
+第四个通道叫做alpha,指不透明程度(0-1).  </li>
+</ul>
+<h3 id="_43">注意</h3>
+<ul>
+<li>可以省去0--&gt;.3(=0.3)  </li>
+<li>仅背景半透明,盒子里的内容不受影响.  </li>
+<li>CSS3新增,IE9+才支持.  </li>
+</ul>
+<hr />
+<h2 id="8">8.总结</h2>
+<p><img src="pic/2.9/1.png" width=80% /><br />
+(截取自B站Pink老师视频)  </p>
+<hr />
+<h1 id="css_7">CSS三大特性</h1>
+<hr />
+<h2 id="1_7">1.层叠性</h2>
+<h3 id="_44">情景</h3>
+<p>用相同的选择器，给相同的元素设置了某些相同的属性,但属性值不同.  </p>
+<h3 id="_45">特点</h3>
+<ul>
+<li>就近原则，后来居上<br />
+因为浏览器会进行覆盖.</li>
+<li>仅覆盖存在冲突的属性，倘若上方的选择器设置的某个属性，下方没有，那该语句仍然正常执行.  </li>
+</ul>
+<hr />
+<h2 id="2_7">2.继承性</h2>
+<h3 id="_46">特点</h3>
+<ul>
+<li>“子承父业”,子标签会继承父标签的某些样式.  </li>
+<li>主要继承和文字有关的样式（文字样式/对齐...）高度等并不会继承. </li>
+</ul>
+<h3 id="_47">继承时相对单位的数值变动</h3>
+<ul>
+<li>百分比/em <br />
+会根据父元素的字体大小计算出值，然后继承，继承后不变.  </li>
+<li>单数值<br />
+会根据子元素字体大小动态调整其所对应的精确数值然后继承，继承后与子元素字体大小有关.  </li>
+</ul>
+<hr />
+<h2 id="3_6">3.优先级</h2>
+<h3 id="_48">情景</h3>
+<p>用不同的选择器，给相同的元素设置了某些相同的属性,但属性值不同.  </p>
+<h3 id="_49">不同选择器的权重</h3>
+<p><img src='pic/2.10/1.png' width=80%/>  </p>
+<p>(截取自B站Pink老师视频)</p>
+<h3 id="_50">对权重的理解</h3>
+<ul>
+<li>范围越小，权重越大.<br />
+类/伪类选择器代表了某一class的元素而id选择器只能选择一个元素.故Id&gt;Class  </li>
+<li>距离越近，权重越大.<br />
+行内样式表直接在元素标签内部，真可谓是设置到家了.自然比Id重要. </li>
+<li>人为越多，权重越大.<br />
+继承是完全自动的，我们并没有专门去设置子元素样式，因此权重最低.<br />
+元素选择器选择所有元素中的某一类,而类/伪类选择器必须人为设置class才能被选择,故元素&lt; Class.  </li>
+</ul>
+<h3 id="_51">复合选择器权重的叠加</h3>
+<ul>
+<li>不论分别是哪种选择器,单独算出来相加即可<br />
+<code>ul li</code> 权重:0,0,0,1+0,0,0,1=0,0,0,2<br />
+<code>.nav li</code> 权重:0,0,1,0+0,0,0,1=0,0,1,1 </li>
+</ul>
+<h3 id="_52">注意</h3>
+<ul>
+<li>表格中的权重数字没有进制.<br />
+权重可还有叠加概念啊，倘若是二进制，则只有16个等级，那就意味着三个臭皮匠（2）真能胜过诸葛亮（4）;倘若是十进制也一样，只是臭皮匠多点罢了.这就会和权重的概念相悖.  </li>
+</ul>
+<hr />
+<h1 id="css_8">CSS盒子模型</h1>
+<p>网页元素基本都是盒子组成的.  </p>
+<hr />
+<h2 id="1_8">1.组成</h2>
+<ul>
+<li>border 边框  </li>
+<li>content 内容    </li>
+<li>padding 内边距 
+文字等内容距离盒子边框的距离.   </li>
+<li>margin 外边距<br />
+盒子之间的边距.</li>
+</ul>
+<hr />
+<h2 id="2_8">2.边框</h2>
+<h3 id="_53">语法</h3>
+<ul>
+<li><code>border-width</code>
+边框宽度 (单位:px)   </li>
+<li><code>border-style</code><br />
+边框样式  </li>
+<li><code>border-color</code><br />
+边框颜色  </li>
+</ul>
+<h3 id="_54">复合型写法</h3>
+<ul>
+<li><code>border: border-width border-style border-color</code>  </li>
+<li><code>border-top/bottom/left/right: border-width border-style border-color</code><br />
+无顺序要求</li>
+</ul>
+<h3 id="_55">表格内部边框</h3>
+<p>倘若只修改table的边框,单元格的边框将不变.<br />
+所以需要选择包括th,td在内的所有table子元素:  </p>
+<pre><code>table,
+table td,
+table th{
+    border: 1px solid white;
+}
+</code></pre>
+<p>问题: 倘若单元格彼此接触，将会发生叠加，导致看起来更粗.<br />
+解决方法: <code>border-collapse:collapse</code> (合并相邻的边框)</p>
+<h3 id="_56">边框会影响盒子实际大小</h3>
+<p>倘若已经设置了宽高,border会把盒子撑开. <br />
+解决方案:设置大小时减去双倍边框长度即可.  </p>
+<hr />
+<h2 id="3-padding">3.内边距-padding</h2>
+<h3 id="_57">语法</h3>
+<p><code>padding-top/bottom/left/right</code><br />
+代表距离边框内部距离</p>
+<h3 id="_58">复合写法</h3>
+<ul>
+<li><code>padding: 长度</code><br />
+上下左右空出该值  </li>
+<li><code>padding: 长度1 长度2</code><br />
+上下空出长度1，左右空出长度2  </li>
+<li><code>padding: 长度1 长度2 长度3</code><br />
+上空出长度1，左右空出长度2，下空出长度3    </li>
+<li><code>padding: 长度1 长度2 长度3 长度4</code><br />
+上右下左的顺序  </li>
+</ul>
+<p>理解:说白了就是从上开始顺时针，第三个值相当于覆盖了第一个在下方的属性值.</p>
+<h3 id="_59">注意</h3>
+<p>1.也会影响盒子实际大小！ <br />
+倘若盒子本身已经有宽度高度属性，设置padding会撑大.</p>
+<p>2.如果盒子没被指定宽度高度，则不会被撑开.<br />
+但一旦以任何形式指定（包括100%）便会撑开. </p>
+<hr />
+<h2 id="4-margin">4.外边距-margin</h2>
+<h3 id="_60">语法</h3>
+<p><code>margin-top/bottom/left/right</code>  </p>
+<h3 id="_61">复合写法</h3>
+<ul>
+<li><code>margin: 长度</code><br />
+上下左右空出该值  </li>
+<li><code>margin: 长度1 长度2</code><br />
+上下空出长度1，左右空出长度2  </li>
+<li><code>margin: 长度1 长度2 长度3</code><br />
+上空出长度1，左右空出长度2，下空出长度3    </li>
+<li><code>margin: 长度1 长度2 长度3 长度4</code><br />
+上右下左的顺序  </li>
+</ul>
+<p>他们各自有10px的margin,所以中间的空隙一共是20px:</p>
+<div style="width: 150px;height: 150px; background-color: green;display: inline-block;margin-right: 10px;"></div>
+<div style="width: 150px;height: 150px; background-color: green;display: inline-block;margin-left: 10px;"></div>
+
+<p><br/></p>
+<h3 id="_62">应用</h3>
+<h4 id="1_9">1.块级水平居中:</h4>
+<p>做法:  </p>
+<ul>
+<li>盒子需要设置了宽度  </li>
+<li>左右外边距都设置为auto<br />
+语法:<br />
+<code>margin: 0 auto;</code>  </li>
+</ul>
+<div style="width: 150px;height: 150px; background-color: green;margin: auto;"></div>
+<p><br/></p>
+<h4 id="2_9">2.行内元素/行内块元素水平居中</h4>
+<p>此时不能用margin.但可以当成文字看待,使用<code>text-align: center;</code>  </p>
+<div style="text-align: center;">
+<span style="width:100px;background-color: green;text-align: center">我是span</span>
+</div>
+
+<h3 id="-">外边距合并--嵌套块塌陷</h3>
+<p>问题:<br />
+以下的div,父元素有<code>margin-top: 20px;</code>,子元素<code>margin-top: 50px;</code>,最终他们一同向下50px,而子元素并未分离.</p>
+<div style="width: 150px;height: 150px; background-color: green;margin-top: 20px;"><div style="width: 50px;height: 50px; background-color: blue;margin-top: 50px;"></div></div>
+<p>对于有嵌套关系的块元素,若父元素和子元素都有外边距,则父元素会塌陷其中较大的外边距.</p>
+<p>解决方法:  </p>
+<ul>
+<li>为父元素定义上边框/上内边框.  </li>
+<li>给父元素添加 <code>overflow:hidden;</code>.  </li>
+</ul>
+<div style="width: 150px;height: 150px; background-color: green;margin-top: 20px;overflow:hidden;"><div style="width: 50px;height: 50px; background-color: blue;margin-top: 50px;"></div></div>
+
+<hr />
+<h2 id="5_6">5.清除内外边距</h2>
+<p>网页元素自带了一些默认内外边距设置:</p>
+<ul>
+<li>body默认8px外边距   </li>
+<li>ul默认40px内边距  </li>
+<li>...</li>
+</ul>
+<p>代码:<br />
+<code>* {padding: 0;margin: 0;}</code></p>
+<hr />
+<h2 id="6_4">6.圆角边框</h2>
+<h3 id="_63">介绍</h3>
+<p><code>border-radius: 数值</code></p>
+<p>原理: <br />
+对于<code>border-radius: 10px</code>,相当构建一个10px半径的圆/椭圆,令其与矩形相切于两点时取弧为转角处边框.  </p>
+<h3 id="_64">使用</h3>
+<ul>
+<li>当使用百分比时,每100%代表一倍长度.  </li>
+<li>想获取圆形时,取正方形,数值设定为50%或宽度的一半.(直径=边长)</li>
+<li>想获取圆角矩形(两条边都是弧),设置为高度的一半.  </li>
+<li>可以跟多个属性:<br />
+<code>border-radius: 左上 右上 右下 左下;</code><br />
+(顺时针顺序)  </li>
+<li>可以拆开来写:<br />
+<code>border-top/bottom-left/right-radius</code> </li>
+</ul>
+<hr />
+<h2 id="7_1">7.盒子阴影</h2>
+<h3 id="_65">语法</h3>
+<p><code>box-shadow: h-shadow v-shadow blur spread color inset;</code></p>
+<ul>
+<li>h-shadow 水平阴影 
+阴影在x轴上移动,正方向向右.  </li>
+<li>v-shadow 垂直阴影 <br />
+阴影在y轴上移动,正方向向上.</li>
+<li>blur 模糊距离--&gt;阴影虚实<br />
+越大,越模糊.(光源越近,阴影越实)  </li>
+<li>spread 阴影大小  </li>
+<li>color 阴影颜色  </li>
+<li>内阴影还是外阴影<br />
+<code>inset</code>代表内阴影.默认就是<code>outset</code>,但不能填<code>outset</code>.</li>
+</ul>
+<p>示例:</p>
+<p>外阴影:  </p>
+<div style="width: 150px;height: 150px;box-shadow: 10px 10px 10px 10px rgba(0,0,0,.5); background: green; display: inline-block;"></div>
+<p>内阴影:  </p>
+<div style="width: 150px;height: 150px;box-shadow: 10px 10px 10px 10px rgba(0,0,0,.5) inset;; background: green; display: inline-block;"></div>
+<p>鼠标悬空时阴影: </p>
+<style>
+    .div_shadow1:hover{
+        box-shadow: 5px 5px 10px 10px rgba(0,0,0,.5);
+    }
+</style>
+<div class="div_shadow1" style="width: 150px;height: 150px; background: green; display: inline-block;"></div>
+
+<hr />
+<h2 id="8_1">8.文字阴影</h2>
+<h3 id="_66">语法</h3>
+<p><code>text-shadow: h-shadow v-shadow blur color;</code> </p>
+<p>尝试一下:</p>
+<p style="text-shadow: 10px 10px 10px black">我有阴影</p>
+
+<hr />
+<h1 id="css_9">CSS浮动</h1>
+<hr />
+<h2 id="1_10">1.传统网页布局的三种方式</h2>
+<ul>
+<li>普通流/标准流/文档流<br />
+标签按照规定好的默认方式排列. </li>
+<li>浮动  </li>
+<li>定位  </li>
+</ul>
+<hr />
+<h2 id="2_10">2.浮动的作用</h2>
+<p>标准流并不能胜任所有工作,需要改变元素标签默认的排列方式.   </p>
+<p><i> 纵向找标准,横向找浮动. </i>  </p>
+<hr />
+<h2 id="3_7">3.浮动的含义</h2>
+<p>创建浮动框,将其移动到边缘,直到左边或右边触及包含块或另一个浮动框的边缘.  </p>
+<hr />
+<h2 id="4_6">4.语法</h2>
+<p><code>选择器{float:属性值}</code><br />
+{none/left/right}  </p>
+<hr />
+<h2 id="5_7">5.浮动特性</h2>
+<h3 id="_67">浮动元素会脱离标准流(脱标)</h3>
+<ul>
+<li>脱标后的盒子不再保留原来的位置.(下方还可以放元素,相当于三维.)  </li>
+<li>如果多个盒子都设置了浮动,则他们会按照属性值一行内显示并且顶端对齐排列;倘若一行装不下了,就会另起一行.  </li>
+</ul>
+<h3 id="_68">浮动元素都具有行内块元素的特点.</h3>
+<ul>
+<li>可以设置宽高,默认宽度是字符长度.</li>
+<li>浮动的盒子中间没有缝隙,紧挨在一起.  </li>
+</ul>
+<h3 id="_69">浮动元素经常和标准流的父级搭配使用</h3>
+<ul>
+<li>先用父元素限定位置,里面再浮动.  </li>
+<li>此时父元素的宽高以及其中其他子元素的某些边框会对它的位置造成限制,但是倘若宽度高度超过了父元素,它并不会撑开盒子,而是直接越过.  </li>
+</ul>
+<hr />
+<h2 id="6_5">6.浮动布局的注意点</h2>
+<ul>
+<li>纵向找标准,横向找浮动.  </li>
+<li>同一盒子中,倘若一个元素浮动,并列的其他元素应当也浮动.  </li>
+<li>浮动盒子只会影响后面的标准流(会压住),不会影响之前的标准流.</li>
+</ul>
+<hr />
+<h2 id="7_2">7.为什么消除浮动</h2>
+<ul>
+<li>很多时候,父元素高度并不确定(产品很多/长文)<br />
+我们希望子元素能够撑开父元素.<br />
+倘若使用浮动,因为浮动的子元素不占位置,所以没法撑开. </li>
+</ul>
+<hr />
+<h2 id="8_2">8.清除浮动语法</h2>
+<p><code>选择器{clear:属性值}</code><br />
+{left/right/both}  </p>
+<hr />
+<h2 id="9">9.清除浮动方法</h2>
+<h3 id="_70">额外标签法</h3>
+<p>找到最后一个浮动的标签,在其之后加入一堵"墙":<code>&lt;div class="clear"&gt;&lt;/div&gt;</code>,然后在<code>&lt;style&gt;</code>里面加入<code>clear:both;</code></p>
+<h3 id="overflow">父级添加overflow</h3>
+<p>可以给父级添加<code>overflow:hidden/auto/scroll;</code><br />
+优点: 代码简洁<br />
+确点: 会切掉溢出的部分.  </p>
+<h3 id="after">after伪元素</h3>
+<p>(.clearfix是父元素的class之一)</p>
+<pre><code>.clearfix::after {
+content: "";
+display: block;
+height: 0;
+clear: both;
+visibility: hidden;
+}
+.clearfix {
+/*IE6、7专有*/
+*zoom: 1;
+}
+</code></pre>
+<p>优点:只需要在CSS里修改,不需要增加额外标签.<br />
+缺点:还得照顾低版本浏览器.</p>
+<h3 id="_71">双伪元素清除浮动</h3>
+<pre><code>.clearfix::before,
+.clearfix::after {
+content: "";
+display: table;
+}
+.clearfix::after {
+clear: both;
+}
+.clearfix {
+*zoom: 1;
+}
+</code></pre>
+<p>display: table; 是为了让两堵墙都在一行上,防止挤到不同行.  </p>
+<p>优点:代码更简洁.<br />
+缺点:还得照顾低版本浏览器. </p>
+<hr />
+<h1 id="css_10">CSS属性书写顺序</h1>
+<p><img src="pic/2.14/1.png" width=80% />
+(截取自B站Pink老师视频)  </p>
+<hr />
+<h1 id="_72">页面布局思路</h1>
+<ul>
+<li>确定版心  <br />
+版心/可视区 就是一个页面中最核心的区域.  </li>
+<li>分析页面中的行模块,然后分析列模块.  </li>
+<li>一行中的列模块经常是浮动布局,先确定每个列的大小,然后确定位置. </li>
+<li>先有结构,再有样式.  </li>
+</ul>
+<h2 id="_73">附: 导航栏制作要点</h2>
+<ul>
+<li>不直接用链接a,而是使用li包含a.  </li>
+</ul>
+<p>原因:  </p>
+<ul>
+<li>li+a 语义更清晰  </li>
+<li>直接用a,搜索引擎会认为该网站有堆砌关键字嫌疑,可能被降权,影响排名.  </li>
+</ul>
+<hr />
+<h1 id="css_11">CSS定位</h1>
+<p>定位可以实现随意指定位置/固定于屏幕位置.  </p>
+<hr />
+<h2 id="1_11">1.定位组成</h2>
+<h3 id="_74">定位模式</h3>
+<p>属性:<code>position</code><br />
+属性值:</p>
+<ul>
+<li><code>static</code><br />
+静态定位  </li>
+<li><code>relative</code><br />
+相对定位  </li>
+<li><code>absolute</code><br />
+绝对定位  </li>
+<li><code>fixed</code><br />
+固定定位  </li>
+</ul>
+<h3 id="_75">边偏移</h3>
+<p>属性:  </p>
+<ul>
+<li><code>top</code>  </li>
+<li><code>bottom</code>  </li>
+<li><code>left</code>  </li>
+<li>
+<p><code>right</code>  </p>
+</li>
+<li>
+<p>如果多个方位同时出现,优先执行left和top</p>
+</li>
+</ul>
+<hr />
+<h2 id="2-">2.定位模式-静态定位</h2>
+<p>一般不用,相当于是标准流.没有边偏移.  </p>
+<hr />
+<h2 id="3-_1">3.定位模式-相对定位</h2>
+<p>语法:　　
+<code>position: relative;</code><br />
+特点: </p>
+<ul>
+<li>相对于原来位置移动位置（以自己为中心）．  </li>
+<li>原来的位置仍然保留！（不脱标）  </li>
+</ul>
+<hr />
+<h2 id="4-">4.定位模式-绝对定位</h2>
+<p>语法:　　
+<code>position: absolute;</code><br />
+特点: </p>
+<ul>
+<li>移动位置时，相对于祖先元素移动（拼爹型）.  </li>
+<li>如果没有祖先元素或祖先元素没有定位(标准流/浮动)，以浏览器为准. <br />
+--&gt;爹不行，娃自己创业.  </li>
+<li>如果祖先元素有定位（除静态定位），则以最近一级的祖先元素（包括爷爷）为参考位置.   </li>
+<li>绝对定位不再占有位置（脱离标准流）.<br />
+相对定位是灵魂出窍，肉体还在;绝对定位做绝了，直接变成鬼了~  </li>
+</ul>
+<hr />
+<h2 id="5_8">5.子绝父相</h2>
+<p>子元素绝对定位，父元素需要是相对定位.  </p>
+<h3 id="_76">推导</h3>
+<ul>
+<li>子元素使用绝对定位，不占有位置而不影响别人.  </li>
+<li>则父元素必须有定位，否则子元素将以浏览器为参照.  </li>
+<li>而父元素只能是相对定位，因为倘若是绝对定位，不保留位置，会影响页面中其他元素.  </li>
+<li>因此对于一个使用绝对定位的子元素，它的某个祖先必须是相对定位才可以正常显示.（总得有一个负责保留位置）  </li>
+</ul>
+<p>当然，凡事都没有绝对，倘若你的需求比较奇特，其他类型也可能发生.  </p>
+<hr />
+<h2 id="6-">6.定位模式-固定定位</h2>
+<p>不管页面怎么运动，其中元素均不动.  </p>
+<h3 id="_77">语法</h3>
+<p><code>选择器{position: fixed;}</code> </p>
+<h3 id="_78">特点</h3>
+<ul>
+<li>以浏览器的可视窗口为参照.  </li>
+<li>位置不保留.（脱标）  </li>
+</ul>
+<h3 id="_79">怎么固定定位在版心一侧位置</h3>
+<p>1.使用left/right把盒子移动到中间<br />
+2.然后使用margin调整与版心位置关系.  </p>
+<hr />
+<h2 id="7-">7.定位模式-粘性定位</h2>
+<p>相对定位和固定定位的混合.  </p>
+<h3 id="_80">语法</h3>
+<p><code>选择器{position: sticky;}</code> </p>
+<h3 id="_81">特点</h3>
+<ul>
+<li>以浏览器的可视窗口为参照.  </li>
+<li>位置保留，占有原先位置.（脱标）   </li>
+<li>必须添加相对位置才有效.（该相对位置代表什么时候变为固定单位效果）  </li>
+<li>兼容性差，IE不支持.  </li>
+</ul>
+<hr />
+<h2 id="8_3">8.定位叠放顺序</h2>
+<h3 id="_82">语法</h3>
+<ul>
+<li>可以使用<code>z-index xx;</code>控制盒子前后次序.<br />
+数值可以是正负整数（无单位），数值越大越靠上.  </li>
+<li>如果数值一样，后来者居上.  </li>
+</ul>
+<hr />
+<h2 id="9_1">9.定位拓展</h2>
+<h3 id="_83">绝对定位的盒子居中</h3>
+<p>加了绝对定位的盒子，不能通过<code>margin: auto;</code>居中.  </p>
+<ul>
+<li>left走50%，即走浏览器一半.  </li>
+<li>margin-left:负值，往左边走宽度一半.  </li>
+</ul>
+<p>值得一提的是,该方法可以选择<code>left + margin-left</code>,不选择<code>left + margin-right</code>,原因是left设置左边框与中线重合,负值可以使得左边框向右,达到整体居中的效果,而<code>margin-right</code>不可以,此时与右边框的位置无关.  </p>
+<p>此法可以把left换成四个方位,可以达到水平/垂直居中的效果.  </p>
+<h3 id="_84">定位特殊特性</h3>
+<ul>
+<li>行内元素使用定位之后,可以直接设置宽度高度.  </li>
+<li>块级元素使用定位之后,默认大小是内容的大小.  </li>
+<li>脱标的盒子不会触发外边距塌陷问题.  </li>
+</ul>
+<h3 id="_85">绝对定位/固定定位 会完全压住盒子</h3>
+<ul>
+<li>浮动元素只会压住下面标准流的盒子，但是不会压住下面标准流的文字/图片.<br />
+--&gt; 因为浮动最初的目的就是为了文字环绕效果.  </li>
+<li>绝对定位会完全压住标准流.  </li>
+</ul>
+<hr />
+<h1 id="_86">显示隐藏元素</h1>
+<p>本质:让一个元素在页面中显示/隐藏.  </p>
+<hr />
+<h2 id="1display">1.display</h2>
+<p>设置一个元素如何显示.  </p>
+<ul>
+<li>
+<p><code>display:none/block/...;</code><br />
+隐藏对象.<br />
+display隐藏元素之后,元素不占有之前位置.</p>
+</li>
+<li>
+<p><code>display:block;</code><br />
+既有转换成块级元素之意,也表示显示该元素.  </p>
+</li>
+</ul>
+<hr />
+<h2 id="2visibility">2.visibility</h2>
+<ul>
+<li><code>visibility: visible/hidden/...</code><br />
+visibility隐藏元素之后,元素仍然占有之前位置.  </li>
+</ul>
+<hr />
+<h2 id="3overflow">3.overflow溢出</h2>
+<p>仅对溢出的内容进行隐藏.  </p>
+<h3 id="_87">语法</h3>
+<p><code>overflow:</code>  </p>
+<ul>
+<li>visible  </li>
+<li>hidden  </li>
+<li>scroll<br />
+溢出部分显示滚动条.  </li>
+<li>auto<br />
+在需要的时候添加滚动条.  </li>
+</ul>
+<h3 id="_88">注意</h3>
+<ul>
+<li>对于有定位的盒子,慎用<code>overflow:hidden</code>,因为它会隐藏其多余的部分.  </li>
+</ul>
+<hr />
+<h2 id="4_7">4.练习</h2>
+<style>
+#div_show1{
+    width: 200px;
+    height: 300px;
+    position: relative;
+}
+#img_show1{
+    width: 200px;
+    height: 300px;
+}
+#div_show2{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    position: absolute;
+    top: 0;
+    display: none;
+}
+
+#div_show1:hover #div_show2{
+    display:block;
+}
+
+#p_show2{
+    display:block;
+    position: absolute;
+    line-height: 20px;
+    top: 50%;
+    margin-top: -10px;
+    left: 50%;
+    margin-left: -45px;
+}
+</style>
+<div id="div_show1">  
+<img src="pic/background/background.jpg" id="img_show1"/>  
+<a href="#4_7" id="a_show2">
+<div id="div_show2">
+<p id="p_show2">被你发现了~
+</p>
+</div>
+</a>
+</div>
+<p><br/></p>
+<ul>
+<li>技巧: 当需要某个盒子被鼠标悬空后，其中的某个子元素变化样式，可以:<br />
+<code>父元素选择器:hover 子元素选择器</code>  </li>
+</ul>
+<hr />
+<h1 id="css_12">CSS高级技巧</h1>
+<hr />
+<h2 id="1_12">1.精灵图技术</h2>
+<h3 id="_89">作用</h3>
+<p>网页中常用到很多小图片,为了减轻服务器压力,提高加载速度.  </p>
+<h3 id="_90">原理</h3>
+<p>整合到一张大图片之中.然后裁剪出小图片.  </p>
+<h3 id="_91">使用</h3>
+<ul>
+<li>针对背景图片(较为固定的小图),经常需要更换的图片最好单独请求.  </li>
+<li>使用<code>background-position</code>控制,左上角是原点.  </li>
+<li>一般往上往左移动,是负值.  </li>
+</ul>
+<h2 id="2_11">2.字体图标</h2>
+<h3 id="_92">优点</h3>
+<ul>
+<li>易于更换且支持常见变换.    </li>
+<li>图片文件占用空间较大,而字体图标不会.  </li>
+<li>减少了服务器请求.  </li>
+<li>不会失真.(矢量图)  </li>
+<li>兼容性好.  </li>
+</ul>
+<h3 id="_93">缺点</h3>
+<ul>
+<li>只能做结构样式比较简单的小图标,并不能完全替代精灵图.  </li>
+</ul>
+<h3 id="_94">下载字体图标</h3>
+<p>在网上选择并下载:<br />
+    http://icomoon.io  <br />
+    http://www.iconfont.cn </p>
+<h3 id="_95">引入字体图标</h3>
+<p>1.下载的字体压缩包内会有一个层叠样式表文件，打开并复制:</p>
+<pre><code>@font-face {
+font-family: 'icomoon';
+src:  url('fonts/icomoon.eot?42qsf7');
+src:  url('fonts/icomoon.eot?42qsf7#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?42qsf7') format('truetype'),
+    url('fonts/icomoon.woff?42qsf7') format('woff'),
+    url('fonts/icomoon.svg?42qsf7#icomoon') format('svg');
+font-weight: normal;
+font-style: normal;
+font-display: block;
+}
+</code></pre>
+<style>
+    @font-face {
+    font-family: 'icomoon';
+    src:  url('fonts/icomoon.eot?42qsf7');
+    src:  url('fonts/icomoon.eot?42qsf7#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?42qsf7') format('truetype'),
+        url('fonts/icomoon.woff?42qsf7') format('woff'),
+        url('fonts/icomoon.svg?42qsf7#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+    }
+    </style>
+
+<p>2.打开压缩包内示例demo.html,拷贝图标后面的小方框.  <br />
+3.在需要使用的地方style里指定字体:  </p>
+<p><code>style="font-family: 'icomoon';"</code>  </p>
+<p>示例:<br />
+<span style="font-family: 'icomoon';">   </span></p>
+<h3 id="_96">添加新的字体图标</h3>
+<p>1.打开网站,点击左上角<code>import icons</code>.<br />
+2.选择压缩包里的selection.json并上传,重新选择.<br />
+3.下载替换即可.  </p>
+<hr />
+<h2 id="3css">3.CSS三角</h2>
+<h3 id="_97">原理</h3>
+<p>记得以前的边框吗?当边框比较粗并且颜色不一致的时候，你可能会发现它是怎样拼接而成的：　　</p>
+<div style="border-top: 10px solid green;border-right: 10px solid white;"><br/></div>
+
+<p>看到右边了吗？真神奇！它的边缘实际上是三角形凸起，以达到“公平”.<br />
+那倘若一个盒子只有边框,没有宽度高度呢？  </p>
+<div style="width: 0;height:0;border-top: 10px solid green;border-right: 10px solid white;border-left: 10px solid pink;border-bottom: 10px solid red;"></div>
+<p>Holy shit! 它竟然完全分为了三角形!<br />
+原理就是我们人为地保留边框的边缘,迫使转角处两两组合成为三角形.倘若把另外三条边框设为透明，就可以出来一个标准的三角形.</p>
+<div style="width: 0;height:0;border-top: 20px solid green;border-right: 20px solid white;border-left: 20px solid pink;border-bottom: 20px solid red;"></div>
+<div style="width: 0;height:0;border: 10px solid transparent;border-bottom: 10px solid red;"></div>
+<p><br/>
+我们可以通过这点控制三角形大小/颜色/方向/比例:<br />
+方向:</p>
+<div style="overflow:hidden;">
+<div style="width: 0;height:0;float:left;border: 10px solid transparent;border-bottom: 10px solid red;"></div>  
+<div style="width: 0;height:0;float:left;border: 10px solid transparent;border-top: 10px solid red;"></div>  
+<div style="width: 0;height:0;float:left;border: 10px solid transparent;border-left: 10px solid red;"></div>  
+<div style="width: 0;height:0;float:left;border: 10px solid transparent;border-right: 10px solid red;"></div>   
+</div>
+<p>比例: </p>
+<div style="overflow:hidden;">
+<div style="width: 0;height:0;float:left;border: 10px solid transparent;border-bottom: 30px solid red;"></div>  
+<div style="width: 0;height:0;float:left;border: 10px solid transparent;border-top: 5px solid red;"></div>  
+<div style="width: 0;height:0;float:left;border: 10px solid transparent;border-left: 20px solid red;"></div>  
+</div>
+
+<p>但可别高兴地太早!现在是四条边框,那么三条/两条甚至一条可以显示么?<br />
+3:<div style="width: 0;height:0;border-left: 20px solid pink;border-top: 20px solid white;border-right: 20px solid green;"></div>
+2:<div style="width: 0;height:0;border-top: 20px solid white;border-right: 20px solid green;"></div>
+2:<div style="width: 0;height:0;border-bottom: 20px solid white;border-left: 40px solid green;"></div>
+2:<div style="width: 0;height:0;border-top: 40px solid white;border-right: 20px solid green;"></div>
+我们发现,更少的边可以创造出更多的方向来,但是单独一条边或是两个相反方向不接触的边将无法形成(没有高度挤不开了).</p>
+<h3 id="css_13">CSS代码</h3>
+<pre><code>width: 0;
+height:0;
+/*照顾低版本浏览器:*/
+line-height: 0;
+font-size: 0;
+/*照顾完了*/
+border: 10px solid transparent;
+border-bottom: 10px solid red;
+</code></pre>
+<hr />
+<h2 id="4css">4.CSS用户页面样式</h2>
+<h3 id="cursor">更改用户鼠标样式 cursor</h3>
+<p><code>cursor: default/pointer/move/text/not-allowed</code></p>
+<h3 id="_98">取消表单轮廓线</h3>
+<pre><code>input{
+    outline: none;
+}
+</code></pre>
+<p>示例:
+<input type="text" class="input1"/></p>
+<style>
+.input1{
+    outline: none;
+}
+.ta1{
+    resize: none;
+}
+</style>
+
+<h3 id="_99">不允许拖动文本域</h3>
+<p>语法:</p>
+<pre><code>resize: none;
+</code></pre>
+<p>示例:<br />
+原始:</p>
+<textarea>
+</textarea>
+<p>现在:</p>
+<textarea class="ta1">
+</textarea>
+
+<hr />
+<h2 id="5_9">5.行内块和文字垂直居中</h2>
+<p>使用场景:<br />
+块级元素和行内块元素.<br />
+语法:<br />
+<code>vertical-align: baseline/top/middle/bottom</code><br />
+[vertical:垂直的]<br />
+默认是baseline(基线).</p>
+<p>定义:<br />
+<img src="pic/2.14/2.png" width=60%/>  </p>
+<p><img src="pic/2.14/2.png" width=20% style="vertical-align: baseline;"/> 我没有设置vertical-align! 
+<br/>
+<img src="pic/2.14/2.png" width=20% style="vertical-align: middle;"/> 我的vertical-align是middle!</p>
+<hr />
+<h2 id="6_6">6.图片底侧空白缝隙</h2>
+<h3 id="bug">Bug</h3>
+<p>图片下方默认有一段空白,原因是行内块元素(图片)会和文字基线对齐.  </p>
+<h3 id="_100">解决方法</h3>
+<ul>
+<li><code>vertical-align:middle/top/bottom</code><br />
+只要不是基线对齐就可以.  </li>
+<li><code>display: block;</code><br />
+因为块级元素没有基线属性,所以不会出Bug.  </li>
+</ul>
+<hr />
+<h2 id="7_3">7.单行文字溢出省略号显示</h2>
+<h3 id="_101">语法</h3>
+<ul>
+<li><code>white-space: nowrap;</code><br />
+[normal:自动换行,nowrap:不换行]<br />
+强制一行内显示  </li>
+<li><code>overflow:hidden</code><br />
+溢出隐藏  </li>
+<li><code>text-overflow: ellipsis</code><br />
+[ellipsis:省略号]<br />
+文字溢出时使用省略号.    </li>
+</ul>
+<hr />
+<h2 id="8_4">8.多行文字溢出省略号显示(兼容性差)</h2>
+<h3 id="_102">语法</h3>
+<pre><code>overflow:hidden;
+text-overflow: ellipsis;  
+/*弹性伸缩盒子模型*/
+display: -webkit-box;  
+/*限制文本行数*/
+-webkit-line-clamp: 2;
+/*设置或检索伸缩盒子对象的子元素的排列方式*/
+-webkit-box-orient: vertical;
+</code></pre>
+<hr />
+<h2 id="9-margin">9.布局技巧-margin负值</h2>
+<h3 id="_103">情景</h3>
+<p>布局时,可能发生盒子间边框重叠,导致1+1=2--&gt;更粗.  </p>
+<h3 id="_104">语法</h3>
+<p><code>margin-left: -边框大小.</code>  </p>
+<h3 id="_105">问题</h3>
+<p>若需要改变边框颜色(鼠标悬空变色),会发生重叠问题,越靠后越在上.  </p>
+<h3 id="_106">解决方案</h3>
+<ul>
+<li>倘若没有使用定位的盒子,那么每次变色的时候将这个盒子变为相对定位即可.  </li>
+<li>使用了定位的盒子,使用z-index调整层级即可.  </li>
+</ul>
+<hr />
+<h2 id="10-">10.布局技巧-文字围绕浮动元素</h2>
+<p>因为浮动本就是为了围绕文字设计的,所以只需要:    </p>
+<ul>
+<li>准备一个大盒子  </li>
+<li>添加一个浮动的图片  </li>
+</ul>
+<hr />
+<h2 id="11css">11.CSS初始化</h2>
+<h3 id="_107">原因</h3>
+<p>利用CSS对浏览器样式重设,保证兼容性.  </p>
+<h3 id="_108">使用</h3>
+<p>不用背,Ctrl+CV工程师~  </p>
+<hr />
+<h1 id="html5">HTML5新增</h1>
+<hr />
+<p>注意:<br />
+只有IE9+才支持.  </p>
+<hr />
+<h2 id="1_13">1.语义化标签</h2>
+<p>对于搜索引擎来说,div都一样.  </p>
+<h3 id="_109">新的结构标签</h3>
+<p><img src="pic/2.14/3.png" width
+=70%></p>
+<p>(截取自B站Pink老师视频)</p>
+<p>这些都相当于div--&gt;块级元素.  </p>
+<h3 id="_110">注意</h3>
+<ul>
+<li>这些标准针对搜索引擎.  </li>
+<li>可以使用多次.  </li>
+<li>IE9中,需要转换为块级元素.  </li>
+<li>移动端没有兼容问题.  </li>
+</ul>
+<hr />
+<h2 id="2_12">2.视频标签</h2>
+<h3 id="_111">语法</h3>
+<p><code>&lt;video&gt;</code>  </p>
+<h3 id="_112">兼容</h3>
+<p>支持MP4,WebM,Ogg.<br />
+建议MP4.  </p>
+<h3 id="_113">代码</h3>
+<pre><code>&lt;video src="文件地址" controls="controls"&gt;
+&lt;/video&gt;
+</code></pre>
+<p>或者:  </p>
+<pre><code>&lt;video controls="controls"&gt;
+    &lt;source src="1.ogg" type="video/ogg"&gt;  
+    &lt;source src="1.mp4" type="video/mp4"&gt;  
+    您的浏览器不支持 video 标签.
+&lt;/video&gt;  
+&lt;!-- 会自动从上到下查找可行方案.--&gt;
+</code></pre>
+<h3 id="_114">参数</h3>
+<p><img src="pic/2.14/4.png" width=70%/><br />
+(截取自B站Pink老师视频)</p>
+<h3 id="_115">注意</h3>
+<ul>
+<li>chrome默认禁用autoplay:<br />
+需要允许静音播放:<code>muted:muted</code>  </li>
+</ul>
+<hr />
+<h2 id="3_8">3.音频标签</h2>
+<h3 id="_116">语法</h3>
+<p><code>&lt;audio&gt;</code>  </p>
+<h3 id="_117">兼容</h3>
+<p>支持MP3,Wav,Ogg.<br />
+建议MP3.  </p>
+<h3 id="_118">参数</h3>
+<p><img src="pic/2.14/5.png" width=70%/><br />
+(截取自B站Pink老师视频)</p>
+<h3 id="_119">注意</h3>
+<ul>
+<li>chrome又禁用了自动播放...  </li>
+</ul>
+<hr />
+<h2 id="4input">4.input表单</h2>
+<p><img src="pic/2.14/6.png" width=70%/><br />
+(截取自B站Pink老师视频)<br />
+<input type="date"/>
+<input type="color"/></p>
+<hr />
+<h2 id="5_10">5.表单属性</h2>
+<p><img src="pic/2.14/7.png" width=70%/><br />
+(截取自B站Pink老师视频)    </p>
+<p><input type="text" placeholder="I'm placeholder!"/>  </p>
+<hr />
+<h1 id="css3">CSS3新增</h1>
+<hr />
+<p>类,属性,伪类权重都是0010.  </p>
+<hr />
+<h2 id="1_14">1.属性选择器</h2>
+<p>根据元素特定属性选择元素.  </p>
+<h3 id="_120">语法</h3>
+<ul>
+<li><code>元素[元素拥有的属性]</code><br />
+会选择有该属性的元素.  </li>
+<li><code>元素[元素拥有的属性=值]</code><br />
+会选择有该属性且为该值的元素.    </li>
+<li><code>元素[元素拥有的属性^=值]</code><br />
+会选择有该属性且值是属性值的开头的元素.   </li>
+<li><code>元素[元素拥有的属性$=值]</code><br />
+会选择有该属性且值是属性值的结尾的元素.  </li>
+<li><code>元素[元素拥有的属性*=值]</code><br />
+会选择有该属性且属性值里包含值的元素.   </li>
+</ul>
+<h3 id="_121">注意</h3>
+<p><code>[元素拥有的属性=值]</code>这玩意才是属性选择器,前面的元素是单独.故整体的权重为0010+前面选择器权重.  </p>
+<hr />
+<h2 id="2_13">2.结构伪类选择器</h2>
+<p>根据文档结构选择元素.  </p>
+<h3 id="_122">语法</h3>
+<ul>
+<li><code>父元素 子元素:first-child</code><br />
+选择父元素里第一个子元素.    </li>
+<li><code>父元素 子元素:last-child</code><br />
+选择父元素里最后一个子元素.   </li>
+<li>
+<p><code>父元素 子元素:nth-child(n)</code><br />
+选择父元素里第n个子元素.(从1开始!)  </p>
+</li>
+<li>
+<p><code>父元素 类型:first-of-type</code><br />
+选择父元素里该类型的第一个.</p>
+</li>
+<li><code>父元素 类型:last-of-type</code><br />
+选择父元素里该类型的最后一个.   </li>
+<li><code>父元素 类型:nth-of-type(n)</code><br />
+选择父元素里该类型的第n个.(从1开始!) </li>
+</ul>
+<h3 id="nth-childnnth-of-typen">nth-child(n)/nth-of-type(n)详解</h3>
+<h4 id="n">n:语法</h4>
+<ul>
+<li>数字  </li>
+<li>公式  </li>
+<li>odd(奇数)/even(偶数)  </li>
+</ul>
+<h4 id="n_1">n为公式的情况</h4>
+<ul>
+<li>若为公式,n会从0开始递增加一代入公式, 类似于通项公式.  </li>
+<li>
+<p>不需要乘号,直接是数学里的简写形式.  </p>
+<blockquote>
+<p>5n 5的倍数<br />
+n+3 从3开始<br />
+-n+3 3之前所有  </p>
+</blockquote>
+</li>
+</ul>
+<h3 id="childtype">child和type的区别</h3>
+<ul>
+<li>child相对于子元素独立,它不在乎子元素是谁,只关心父元素.因此first-child选择的永远是父元素的第一个,但倘若子元素与child选出的不同,则将不会被选择.  </li>
+<li>type是相对类型而言的,它会选择该类型下面的第几个.  </li>
+<li>在盒子里仅一种元素的情况下,优先选择child(如无序列表);反之type.  </li>
+</ul>
+<hr />
+<h2 id="3_9">3.伪元素选择器</h2>
+<p>利用CSS创建新标签元素,而不需要html标签.  </p>
+<h3 id="_123">分类</h3>
+<ul>
+<li><code>::before</code><br />
+放到父盒子里面的前面  </li>
+<li><code>::after</code><br />
+放到父盒子里面的后面  </li>
+</ul>
+<h3 id="_124">注意</h3>
+<ul>
+<li>它创建一个元素,是盒子,但是是行内元素.</li>
+<li>无法在文档树里找到.  </li>
+<li>语法: <code>element::before{}</code>  </li>
+<li>必须有content属性.  </li>
+<li><code>::before/::after</code>权重是0001.</li>
+<li>若要实现hover后设置before:  <code>选择器:hover::before</code>表示当鼠标经过选择器选中的盒子,里面的before...(不能把hover和before换位置)  </li>
+</ul>
+<hr />
+<h2 id="4-border-box">4.盒子模型 border-box</h2>
+<p>之前的盒子,加入margin/padding会变大,还得减去.  </p>
+<h3 id="_125">语法</h3>
+<ul>
+<li><code>box-sizing: content-box/border-box</code><br />
+默认是<code>content-box</code>,即盒子最终大小=边框+内边距+内容大小.<br />
+设置为<code>border-box</code>就不会撑大盒子了.  </li>
+</ul>
+<hr />
+<h2 id="5_11">5.图片模糊处理</h2>
+<p><code>filter 函数();</code>
+--&gt; <code>filter: blur(数值px)</code><br />
+数值越大越模糊.</p>
+<hr />
+<h2 id="6calc">6.calc函数</h2>
+<p>进行计算.  支持四则运算.
+<code>width:calc(100% - 80px)</code><br />
+注意:运算符两边一定要有空格!</p>
+<hr />
+<h2 id="7css3">7.CSS3过渡</h2>
+<p><code>transition:要过渡的属性 花费时间 运动曲线 何时开始</code></p>
+<ul>
+<li>属性: 宽度/高度/内外边距...  </li>
+<li>花费时间:必须写单位(s)  </li>
+<li>运动曲线 (默认ease可省略) 
+<img src="pic/2.14/8.png" width=50%/><br />
+(截取自B站Pink老师视频)    </li>
+<li>何时开始(延迟时间,可以省略,单位s)</li>
+<li>需要变化两个时,使用逗号并列参数.<br />
+<code>transition: width 1s linear ,background-color 1s ease;</code></li>
+<li>需要所有都变化,用all即可.  </li>
+<li>给元素设定好这个参数后,当值变化就会有过渡效果.</li>
+</ul>
+<p>尝试一下:  </p>
+<pre><code>&lt;style&gt;
+    .trans div{
+        width: 100px;
+        height: 100px;
+        background-color: red;
+    }
+    .trans div:nth-of-type(2n+1){
+        background-color: green;
+    }
+    .trans1:hover{
+        width: 100%;
+        transition: width 1s linear ,background-color 1s ease;
+    }
+    .trans2:hover{
+        width: 100%;
+        transition: width 1s ease ;
+    }
+    .trans3:hover{
+        width: 100%;
+        transition: width 1s ease-in ;
+    }
+    .trans4:hover{
+        width: 100%;
+        transition: width 1s ease-out ;
+    }
+    .trans5:hover{
+        width: 100%;
+        transition: width 1s ease-in-out ;
+    }
+&lt;/style&gt;
+&lt;div class="trans"&gt;
+&lt;div class="trans1"&gt;&lt;/div&gt;
+&lt;div class="trans2"&gt;&lt;/div&gt;
+&lt;div class="trans3"&gt;&lt;/div&gt;
+&lt;div class="trans4"&gt;&lt;/div&gt;
+&lt;div class="trans5"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<style>
+    .trans div{
+        width: 100px;
+        height: 100px;
+        background-color: red;
+    }
+    .trans div:nth-of-type(2n+1){
+        background-color: green;
+    }
+    .trans1:hover{
+        width: 100%;
+        transition: width 1s linear ,background-color 1s ease;
+    }
+    .trans2:hover{
+        width: 100%;
+        transition: width 1s ease ;
+    }
+    .trans3:hover{
+        width: 100%;
+        transition: width 1s ease-in ;
+    }
+    .trans4:hover{
+        width: 100%;
+        transition: width 1s ease-out ;
+    }
+    .trans5:hover{
+        width: 100%;
+
+        transition: width 1s ease-in-out ;
+    }
+</style>
+<div class="trans">
+<div class="trans1"></div>
+<div class="trans2"></div>
+<div class="trans3"></div>
+<div class="trans4"></div>
+<div class="trans5"></div>
+</div>
+<p><br/>
+尝试一下变色:</p>
+<style>
+    .trans1{
+        width: 100px;
+        height: 100px;
+        transition: width 1s linear ,background-color 1s ease;
+        background-color: red;
+    }
+    .trans1:hover{
+        width: 100%;
+        background-color: green;
+    }
+</style>
+<div class="trans1"></div>
+<p><br/></p>
+<style>
+    .bar_test{
+        width: 500px;
+        height: 20px;
+        border-radius: 10px;
+        background-color: white;
+    }
+    .bar_test_inside{
+        width: 10%;
+        height: 20px;
+        border-radius: 10px;
+        background-color: skyblue;
+        transition: all 1s;
+        }
+    .bar_test:hover .bar_test_inside{
+        width: 100%;
+        background-color: green;
+    }
+</style>
+
+<div class="bar_test">
+    <div class="bar_test_inside"></div>
+</div>
+
+<hr />
+<h2 id="8html5">8.广义的HTML5</h2>
+<ul>
+<li>广义的HTML5=HTML本身+CSS3+JS  </li>
+</ul></div>
+                </div>
+        </div>
+
+    <hr>
+    <footer class="container">
+        
+        <center>Documentation built with <a href="http://www.mkdocs.org">MkDocs</a> and <a href="http://kristopolous.github.io/BOOTSTRA.386">BOOTSTRA.386</a>.</center>
+    </footer>
+        <script src="../search/main.js"></script>
+    </body>
+</html>
