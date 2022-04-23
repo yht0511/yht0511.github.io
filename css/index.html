@@ -345,6 +345,14 @@
         
             <li><a href="#8html5">8.广义的HTML5</a></li>
         
+            <li><a href="#92d">9.2D转换</a></li>
+        
+            <li><a href="#10">10.动画</a></li>
+        
+            <li><a href="#113d">11.3D转换</a></li>
+        
+            <li><a href="#12">12.浏览器私有前缀</a></li>
+        
     
     
     </ul>
@@ -1979,7 +1987,431 @@ n+3 从3开始<br />
 <h2 id="8html5">8.广义的HTML5</h2>
 <ul>
 <li>广义的HTML5=HTML本身+CSS3+JS  </li>
-</ul></div>
+</ul>
+<hr />
+<h2 id="92d">9.2D转换</h2>
+<h3 id="_126">分类</h3>
+<ul>
+<li>translate<br />
+移动  </li>
+<li>rotate<br />
+旋转  </li>
+<li>scale<br />
+缩放  </li>
+</ul>
+<h3 id="translate">translate</h3>
+<p>改变元素位置,类似定位.<br />
+语法:<br />
+<code>transform: translate( x, y);</code><br />
+<code>transform: translateX( x);</code><br />
+<code>transform: translateY( y);</code><br />
+[transform: 变换式,translate: 变换]</p>
+<p>尝试一下:  </p>
+<div class="transform-test" style="width:200px;height:200px;transition: transform 1s;background-color: pink;"></div>
+
+<style>
+    .transform-test:hover{
+        transform: translateX(100px);
+    }
+
+</style>
+<p><br/>
+最大的优点:不会影响其他盒子的位置.  </p>
+<h3 id="rotate">rotate</h3>
+<p>改变元素位置,类似定位.  </p>
+<h4 id="_127">语法:</h4>
+<p><code>transform: rotate( 度数);</code><br />
+单位:deg,正值代表顺时针.<br />
+[rotate: 旋转]</p>
+<p>尝试一下:  </p>
+<div class="rotate-test" style="height:200px;width:200px;;border-radius: 50%;transition: transform 1s;background-image: url(pic/background/background.jpg);background-repeat:no-repeat;"></div>
+
+<style>
+    .rotate-test:hover{
+        transform: rotate(200deg);
+    }
+
+</style>
+<p><br/>
+最大的优点:不会影响其他盒子的位置.  </p>
+<h4 id="_128">利用旋转制造三角</h4>
+<p>制作一半的正方形边框,旋转即可.  </p>
+<style>
+    .css-3jiao{
+        width: 20px;
+        height: 20px;  
+        position: relative;
+        left: 20px;
+        border-right: 5px white solid;
+        border-bottom: 5px white solid;
+        transform: rotate(45deg);
+        transition: all .3s;
+    }
+    .css-3jiao:hover{
+        transform: rotate(-135deg);  
+    }
+</style>
+<div class="css-3jiao"></div>
+<p><br/></p>
+<h4 id="_129">设置转换中心点</h4>
+<p><code>transform-origin: x y;</code><br />
+默认值: 50% 50%,即元素中点. <br />
+原点是左上角. <br />
+可以设置像素/百分比/方位名词.  </p>
+<div class="rotate-test1" style="height:200px;width:200px;;border-radius: 50%;transition: transform 1s;background-image: url(pic/background/background.jpg);background-repeat:no-repeat;"></div>
+
+<style>
+    .rotate-test1:hover{
+        transform: rotate(200deg);
+        transform-origin: left bottom;
+    }
+</style>
+
+<h3 id="scale">scale</h3>
+<p><code>transform: scale( x, y);</code>  </p>
+<ul>
+<li>填入倍数.  </li>
+<li>只写一个参数,相当于给两个都是这个参数. </li>
+</ul>
+<div class="scale-test1" style="height:200px;width:200px;;border-radius: 50%;transition: transform 1s;background-image: url(pic/background/background.jpg);background-repeat:no-repeat;"></div>
+
+<style>
+    .scale-test1:hover{
+        transform: scale(3,3) ;
+        /* transform-origin: left bottom; */
+    }
+</style>
+
+<h4 id="_130">优势</h4>
+<ul>
+<li>传统的修改宽高度会影响下面盒子,且中心点只能是左上角.而scale不会,且中心店可以改变.  </li>
+</ul>
+<h3 id="_131">综合性写法</h3>
+<p><code>transform: translate() rotate() scale()</code> <br />
+需要把位移放在前面,因为会影响变换中心点. </p>
+<hr />
+<h2 id="10">10.动画</h2>
+<h3 id="_132">定义动画</h3>
+<pre><code>@keyframes 动画名称
+{   
+    /*动画开始*/
+    0%{
+        transform: translate(0px);
+    }
+    /*动画结束*/
+    100%{
+        transform: translate(100px);
+    }
+}
+</code></pre>
+<h3 id="_133">调用动画</h3>
+<pre><code>/*调用动画*/
+animation-name: 动画名称;
+/*持续时间*/
+animation-duration: 时间(s/ms);
+</code></pre>
+<p>刷新查看:</p>
+<style>
+    @keyframes frame-test
+    {   
+    /*动画开始*/
+    0%{
+        transform: translate(0px);
+    }
+    /*动画结束*/
+    100%{
+        transform: translate(500px);
+    }
+    }
+    .frame-test-div{
+        width: 100px;
+        height: 50px;
+        background-color: green;
+        animation-name: frame-test;
+        animation-duration: 2s;
+    }
+</style>
+<div class="frame-test-div"></div>
+<p><br/></p>
+<h3 id="_134">注意</h3>
+<ul>
+<li>也可以使用from/to,相当于0%/100%.  </li>
+<li>可以通过多个百分比设定不同运动状态.  </li>
+<li>里面变换的状态写的是相对与最初的变化,而不是运动到此时.  </li>
+<li>百分比就是总时间的划分.</li>
+</ul>
+<style>
+    @keyframes frame-test1
+    {   
+    /*动画开始*/
+    0%{
+        transform: translate(0px);
+    }
+    /*动画结束*/
+    25%{
+        transform: translate(500px);
+    }
+    50%{
+        transform: translate(500px,-500px); 
+    }
+    75%{
+        transform: translate(0px,-500px); 
+    }
+    100%{
+        transform: translate(0px,0px); 
+    }
+    }
+    .frame-test-div1{
+        width: 100px;
+        height: 50px;
+        background-color: green;
+        animation-name: frame-test1;
+        animation-duration: 2s;
+    }
+</style>
+<div class="frame-test-div1"></div>
+
+<h3 id="_135">常见属性</h3>
+<p><img src="pic/2.14/9.png" width=70%></p>
+<style>
+    @keyframes frame-test2
+    {   
+    /*动画开始*/
+    0%{
+        transform: translate(0px);
+    }
+
+    50%{
+        transform: translate(100px,0px); 
+    }
+
+    100%{
+        transform: translate(0px,0px); 
+    }
+    }
+    .frame-test-div2{
+        width: 100px;
+        height: 50px;
+        background-color: green;
+        animation-name: frame-test2;
+        animation-duration: 1s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite; 
+        animation-play-state: paused;
+    }
+    .frame-test-divv:hover .frame-test-div2{
+        animation-play-state: running;
+    }
+</style>
+<p>[infinite:无限的]</p>
+<div class="frame-test-divv">
+<div class="frame-test-div2"></div>
+</div>
+
+<h3 id="_136">简写</h3>
+<p><code>animation: 动画名称 持续时间 运动曲线 何时开始 播放次数 是否反方向 动画起始或停止的状态</code><br />
+注意:简写里没有animation-play-state,其他都有.  </p>
+<style>
+    @keyframes frame-test-water
+    {   
+
+    25%{
+        transform: scale(1.5);
+    }
+
+    50%{
+        transform: scale(2);
+    }
+
+    75%{
+        transform: scale(2.5);
+    }
+
+    100%{
+        transform: scale(3);
+    }
+
+    }
+    .animation-test-water{
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: 1px skyblue solid;
+        animation: frame-test-water 1s steps(1000) infinite;
+        animation-play-state: paused;
+    }
+    .animation-test-water:hover{
+        animation-play-state: running;
+    }
+
+</style>
+<div class="animation-test-water"></div>
+<p><br/></p>
+<h3 id="-steps">速度曲线--steps步长</h3>
+<p>指定了时间函数中的间隔步长.就是分几步完成该动画.</p>
+<style>
+    @keyframes frame-test-text
+    {   
+    0%{
+        width: 0px;
+    }
+    100%{
+        width: 320px;
+    }
+
+    }
+    .animation-test-text{
+        width: 0px;
+        height: 20px;
+        font-size: 20px;
+        line-height: 25px;
+        animation: frame-test-text 3s steps(16) 1 forwards;
+        overflow: hidden;
+        animation-play-state: paused;
+    }
+    .animation-test-div:hover .animation-test-text{
+        animation-play-state: running;
+    }
+
+</style>
+<div class="animation-test-div">
+<div class="animation-test-text">被你发现了~打字机效果真好玩~</div>
+</div>
+<p><br/></p>
+<h2 id="113d">11.3D转换</h2>
+<h3 id="_137">特点</h3>
+<ul>
+<li>近大远小   </li>
+<li>物体存在相互遮挡  </li>
+<li>屏幕向外面是正值  </li>
+</ul>
+<h3 id="3d-translate3d">3D移动 translate3d</h3>
+<p><code>transform: translateX/Y/Z/3d()</code><br />
+translateZ一般是px单位,而不是百分比. <br />
+3d里三个值不能省略,没有就写0.</p>
+<h3 id="perspective">透视 perspective</h3>
+<ul>
+<li>模拟人眼观察物体</li>
+<li>视距越大,物体越小(近大远小).  </li>
+<li>透视单位:像素.  </li>
+<li>写在父元素上面</li>
+</ul>
+<h3 id="3d">3d旋转</h3>
+<h4 id="_138">语法</h4>
+<pre><code>transform: rotateX(xxdeg);  
+transform: rotateY(xxdeg);  
+transform: rotateZ(xxdeg);  
+transform: rotate3d(x,y,z,xxdeg);
+</code></pre>
+<p>分别代表绕哪个轴旋转.<br />
+rotateZ和2d的rotate差不多.<br />
+rotate3d的前3个参数构成一个空间矢量.这允许它绕任意轴转动.此时xyz没有单位,之间的比例才是重要的.  </p>
+<style>
+    .test-3d-div{
+        perspective: 200px;
+    }
+
+    .test-3d-div1{
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        transition: all 3s;
+    }
+    .test-3d-div1:hover{
+        transform: rotateX(-360deg);
+    }
+</style>
+<div class="test-3d-div">
+<div class="test-3d-div1">有透视X</div>
+</div>
+
+<style>
+
+    .test-3d-div2{
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        transition: all 3s;
+    }
+    .test-3d-div2:hover{
+        transform: rotateX(360deg);
+    }
+</style>
+
+<div class="test-3d-div2">无透视X</div>
+
+<style>
+    .test-3d-divY{
+        perspective: 200px;
+    }
+
+    .test-3d-div1Y{
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        transition: all 3s;
+    }
+    .test-3d-div1Y:hover{
+        transform: rotateY(-360deg);
+    }
+</style>
+<div class="test-3d-divY">
+<div class="test-3d-div1Y">有透视Y</div>
+</div>
+
+<style>
+    .test-3d-divZ{
+        perspective: 200px;
+    }
+
+    .test-3d-div1Z{
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        transition: all 3s;
+    }
+    .test-3d-div1Z:hover{
+        transform: rotateZ(-360deg);
+    }
+</style>
+<div class="test-3d-divZ">
+<div class="test-3d-div1Z">有透视Z</div>
+</div>
+
+<h3 id="_139">左手法则</h3>
+<p>对对对,就是物理那个...大拇指朝向正方向,四指是旋转方向.  </p>
+<h3 id="3d_1">3d呈现</h3>
+<p><code>transform-style</code>   </p>
+<ul>
+<li>控制子元素是否开启三维立体环境  </li>
+<li><code>transform-style: flat</code><br />
+默认不开启3d立体空间  </li>
+<li><code>transform-style: preserve-3d</code><br />
+子元素开启立体空间  </li>
+</ul>
+<p>注意:  </p>
+<ul>
+<li>代码写给父级,影响子盒子  </li>
+</ul>
+<h2 id="12">12.浏览器私有前缀</h2>
+<h3 id="_140">私有前缀</h3>
+<ul>
+<li>-moz-<br />
+火狐浏览器  </li>
+<li>-ms-<br />
+IE浏览器  </li>
+<li>-webkit-<br />
+safari &amp; chrome  </li>
+<li>-o-<br />
+Opera浏览器  </li>
+</ul>
+<h3 id="_141">提倡语法</h3>
+<pre><code>-moz-border-radius  
+-webkit-border-radius  
+-o-border-radius  
+border-radius
+</code></pre>
+<p>先写私有前缀,提高兼容性.  </p></div>
                 </div>
         </div>
 
