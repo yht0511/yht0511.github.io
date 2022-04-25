@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="杨浩天">
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>JavaScript - 杨浩天-笔记</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/bootstrap-theme.min.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="..">杨浩天-笔记</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="..">关于</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="../Front-End/">前端</a>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li>
+                    <a href="https://github.com/yht0511/yht0511.github.io">
+                        
+                            <i class="fa fa-github"></i>
+                        
+                        GitHub
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="row">
+                    <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+      
+    
+        <li class="main active"><a href="#javascript">JavaScript</a></li>
+        
+    
+        <li class="main "><a href="#_1">变量</a></li>
+        
+            <li><a href="#1">1.变量命名规则</a></li>
+        
+            <li><a href="#2typeof">2.typeOf()</a></li>
+        
+            <li><a href="#3">3.变量声明</a></li>
+        
+            <li><a href="#4js">4.js 对象</a></li>
+        
+            <li><a href="#5">5.变量比较</a></li>
+        
+            <li><a href="#6">6.清空变量</a></li>
+        
+            <li><a href="#7">7.声明提升</a></li>
+        
+    
+        <li class="main "><a href="#_6">函数</a></li>
+        
+            <li><a href="#1_1">1.箭头函数</a></li>
+        
+    
+        <li class="main "><a href="#_7">格式</a></li>
+        
+            <li><a href="#1_2">1.折行</a></li>
+        
+    
+    
+    </ul>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p><link rel="stylesheet" href="../style-long.css">
+<link rel="stylesheet" href="../style-all.css">
+<br/></p>
+<script src="/all.js"></script>
+
+<h1 id="javascript">JavaScript</h1>
+<hr />
+<p>本笔记仅记录一些需要强加记忆之处和重点.</p>
+<hr />
+<h1 id="_1">变量</h1>
+<hr />
+<h2 id="1">1.变量命名规则</h2>
+<ul>
+<li>小驼峰法<br />
+<code>variableName</code></li>
+<li>大驼峰法<br />
+<code>VariableName</code></li>
+<li>下划线法<br />
+<code>variable_name</code></li>
+</ul>
+<hr />
+<h2 id="2typeof">2.typeOf()</h2>
+<p>获取变量类型<br />
+注意:它不能用来判断是 Array 还是 Object.<br />
+可以使用<code>Array.isArray(元素)</code>或<code>元素 instanceof Array</code></p>
+<hr />
+<h2 id="3">3.变量声明</h2>
+<ul>
+<li>可以重复声明变量,但只有重新赋值可以改变变量的值,声明不会.</li>
+<li>声明时可以用 new 来专门声明类型.但这并不会影响之后的类型转换.</li>
+<li>倘若一个变量未被声明,在非严格模式下它仍可运行,会成为 window 的属性之一,属于全局变量的可配置属性,可删除.</li>
+</ul>
+<hr />
+<h2 id="4js">4.js 对象</h2>
+<h3 id="_2">寻址方式</h3>
+<ul>
+<li><code>变量名.属性</code></li>
+<li><code>变量名['属性']</code></li>
+</ul>
+<h3 id="_3">键值对</h3>
+<ul>
+<li>键必须是字符串/符号.</li>
+</ul>
+<hr />
+<h2 id="5">5.变量比较</h2>
+<h3 id="_4">等于号</h3>
+<ul>
+<li>==<br />
+倘若类型不同,会转化为同一类型看值是否相等.  </li>
+<li>===
+类型不同便不等.</li>
+</ul>
+<h3 id="_5">条件运算符</h3>
+<p><code>variablename=(condition)?value1:value2</code><br />
+value1:条件真,value2:条件假.  </p>
+<hr />
+<h2 id="6">6.清空变量</h2>
+<ul>
+<li><code>变量 = undefined</code> 恢复到未赋值变量状态  </li>
+<li><code>变量 = null</code> 释放指向对象的引用.  </li>
+</ul>
+<hr />
+<h2 id="7">7.声明提升</h2>
+<ul>
+<li>js会默认将函数及变量的声明提到最上面,因此可以先使用,再声明.  </li>
+<li>但是初始化,即<code>x=5</code>的变量将不会提升.  </li>
+</ul>
+<hr />
+<h1 id="_6">函数</h1>
+<h2 id="1_1">1.箭头函数</h2>
+<p><code>(函数的参数) =&gt; {函数体};</code><br />
++ 倘若参数只有一个,可以省略包裹参数的括号.
++ 没有参数--&gt;空括号  </p>
+<hr />
+<h1 id="_7">格式</h1>
+<hr />
+<h2 id="1_2">1.折行</h2>
+<ul>
+<li>遇到运算符可以直接折行</li>
+<li>字符串内需要添加反斜杠(某些浏览器可能不允许)</li>
+<li>使用字符串加法.</li>
+</ul></div>
+                </div>
+        </div>
+
+    <hr>
+    <footer class="container">
+        
+        <center>Documentation built with <a href="http://www.mkdocs.org">MkDocs</a> and <a href="http://kristopolous.github.io/BOOTSTRA.386">BOOTSTRA.386</a>.</center>
+    </footer>
+        <script src="../search/main.js"></script>
+    </body>
+</html>
