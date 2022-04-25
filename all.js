@@ -161,8 +161,41 @@ function after_loaded() {
           document.body.appendChild(input);\
           input.select();\
           document.execCommand('Copy');\
-          document.body.removeChild(input);"
+          document.body.removeChild(input);\
+          after_copied()"
       );
     }
   }
+}
+
+function after_copied() {
+  var copied_div = document.createElement("div");
+  copied_div.style.backgroundColor = "rgba(255,255,255,.7)";
+  copied_div.style.width = "15%";
+  copied_div.style.height = "6%";
+  copied_div.style.borderRadius = "10px";
+  copied_div.style.position = "fixed";
+  copied_div.style.top = "-6%";
+  copied_div.style.left = document.documentElement.clientWidth * 0.425+'px';
+  copied_div.style.zIndex = "3000";
+  copied_div.style.fontSize = "25px";
+  copied_div.style.color = "rgba(0,0,255,1)";
+  copied_div.style.textAlign = "center";
+  copied_div.style.fontWeight = 1000;
+  copied_div.style.transition = "all 0.5s";
+  copied_div.style.lineHeight =
+    document.documentElement.clientHeight * 0.06 + "px";
+  copied_div.style.fontFamily = "icomoon";
+  copied_div.innerText = " Copied";
+  Body.appendChild(copied_div);
+  
+  setTimeout(function () {
+    copied_div.style.top = "0px";
+  }, 1);
+  setTimeout(function () {
+    copied_div.style.top = "-6%";
+  }, 3000);
+  setTimeout(function () {
+    document.body.removeChild(copied_div);
+  }, 3500);
 }
