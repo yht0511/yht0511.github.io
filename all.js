@@ -31,10 +31,13 @@ Body.appendChild(text_div);
 var progress_div = document.createElement("div");
 progress_div.style.position = "fixed";
 progress_div.style.top = document.documentElement.clientHeight * 0.475 + "px";
-progress_div.style.left = document.documentElement.clientWidth * 0.325 + "px";
+progress_div.style.left = document.documentElement.clientWidth * 0.25 + "px";
 progress_div.style.backgroundColor = "rgba(255,255,255,0.5)";
-progress_div.style.width = document.documentElement.clientWidth * 0.35 + "px";
+progress_div.style.width = document.documentElement.clientWidth * 0.5 + "px";
 progress_div.style.height = "5%";
+progress_div.style.textAlign = "center";
+progress_div.style.fontSize = document.documentElement.clientWidth * 0.03 + "px";
+progress_div.style.color="white";
 progress_div.style.borderRadius =
   document.documentElement.clientHeight / 2 + "px";
 
@@ -44,6 +47,8 @@ progress_mask.style.borderRadius =
   document.documentElement.clientHeight / 2 + "px";
 progress_mask.style.width = "0%";
 progress_mask.style.height = "100%";
+progress_mask.style.position="absolute";
+progress_mask.style.top="0px";
 Body.appendChild(mask_div);
 //加载完成
 var imgs;
@@ -84,6 +89,8 @@ function add_progress() {
   value = value.substr(0, value.length - 1);
   value = parseFloat(value);
   value += 100 / imgs.length;
+  // progress_div.innerText=parseInt(value)+'%';
+  progress_div.appendChild(progress_mask);
   // value = parseInt(value);
   progress_mask.style.width = value + "%";
   console.log("value:" + value);
@@ -172,11 +179,17 @@ function after_copied() {
   var copied_div = document.createElement("div");
   copied_div.style.backgroundColor = "rgba(255,255,255,.7)";
   copied_div.style.width = "15%";
+  copied_div.style.minWidth = "160px";
   copied_div.style.height = "6%";
   copied_div.style.borderRadius = "10px";
   copied_div.style.position = "fixed";
   copied_div.style.top = "-6%";
-  copied_div.style.left = document.documentElement.clientWidth * 0.425+'px';
+  if (document.documentElement.clientWidth > 1060)
+    copied_div.style.left = document.documentElement.clientWidth * 0.425 + "px";
+  else {
+    copied_div.style.left =
+      document.documentElement.clientWidth * 0.5 - 80 + "px";
+  }
   copied_div.style.zIndex = "3000";
   copied_div.style.fontSize = "25px";
   copied_div.style.color = "rgba(0,0,255,1)";
@@ -188,7 +201,7 @@ function after_copied() {
   copied_div.style.fontFamily = "icomoon";
   copied_div.innerText = " Copied";
   Body.appendChild(copied_div);
-  
+
   setTimeout(function () {
     copied_div.style.top = "0px";
   }, 1);
